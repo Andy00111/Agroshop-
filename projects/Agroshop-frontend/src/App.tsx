@@ -3,10 +3,14 @@ import { DaffiWalletConnect } from '@daffiwallet/connect'
 import { PeraWalletConnect } from '@perawallet/connect'
 import { PROVIDER_ID, ProvidersArray, WalletProvider, useInitializeProviders } from '@txnlab/use-wallet'
 import algosdk from 'algosdk'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import { SnackbarProvider } from 'notistack'
-import Home from './Home'
+// import Home from './CreateAgro'
 import { getAlgodConfigFromViteEnvironment, getKmdConfigFromViteEnvironment } from './utils/network/getAlgoClientConfigs'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import Account from './CreateAgro'
+import Home from './Home'
+// import Account from './components/Account'
 
 let providersArray: ProvidersArray
 if (import.meta.env.VITE_ALGOD_NETWORK === '') {
@@ -51,12 +55,19 @@ export default function App() {
   const queryClient = new QueryClient()
 
   return (
-    <SnackbarProvider maxSnack={3}>
-      <WalletProvider value={walletProviders}>
-        <QueryClientProvider client={queryClient}>
-          <Home />
-        </QueryClientProvider>
-      </WalletProvider>
-    </SnackbarProvider>
+       <>
+     <Router>
+       <SnackbarProvider maxSnack={3}>
+         <WalletProvider value={walletProviders}>
+           <QueryClientProvider client={queryClient}>
+             <Routes>
+               <Route path="/" element={<Home/>} />
+               <Route path="account/" element={<Account />} />
+             </Routes>
+           </QueryClientProvider>
+         </WalletProvider>
+       </SnackbarProvider>
+     </Router>
+   </>
   )
 }
