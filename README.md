@@ -53,3 +53,4 @@ The frontend starter also provides an example of interactions with your Agroshop
 ## Next Steps
 
 You can take this project and customize it to build your own decentralized applications on Algorand. Make sure to understand how to use AlgoKit and how to write smart contracts for Algorand before you start.
+# Agroshops
