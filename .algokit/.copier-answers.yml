@@ -1,0 +1,10 @@
+# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+_commit: 2.0.12
+_src_path: gh:algorandfoundation/algokit-fullstack-template
+author_email: musabyakubu1000@gmail.com
+author_name: Mus'ab
+cloud_provider: none
+contract_name: Agroshop
+preset_name: production
+project_name: Agroshop
+

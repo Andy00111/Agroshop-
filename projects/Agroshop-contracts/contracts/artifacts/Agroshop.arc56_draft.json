@@ -1,0 +1,3572 @@
+{
+  "name": "Agroshop",
+  "desc": "",
+  "methods": [
+    {
+      "name": "allowAsset",
+      "args": [
+        {
+          "name": "mbrPay",
+          "type": "pay"
+        },
+        {
+          "name": "asset",
+          "type": "uint64"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      },
+      "actions": {
+        "create": [],
+        "call": [
+          "NoOp"
+        ]
+      }
+    },
+    {
+      "name": "listingDeposit",
+      "args": [
+        {
+          "name": "mbrPay",
+          "type": "pay"
+        },
+        {
+          "name": "xfer",
+          "type": "axfer"
+        },
+        {
+          "name": "nonce",
+          "type": "uint64"
+        },
+        {
+          "name": "unitaryPrice",
+          "type": "uint64"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      },
+      "actions": {
+        "create": [],
+        "call": [
+          "NoOp"
+        ]
+      }
+    },
+    {
+      "name": "deposit",
+      "args": [
+        {
+          "name": "xfer",
+          "type": "axfer"
+        },
+        {
+          "name": "nonce",
+          "type": "uint64"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      },
+      "actions": {
+        "create": [],
+        "call": [
+          "NoOp"
+        ]
+      }
+    },
+    {
+      "name": "setPrice",
+      "args": [
+        {
+          "name": "asset",
+          "type": "uint64"
+        },
+        {
+          "name": "nonce",
+          "type": "uint64"
+        },
+        {
+          "name": "unitaryPrice",
+          "type": "uint64"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      },
+      "actions": {
+        "create": [],
+        "call": [
+          "NoOp"
+        ]
+      }
+    },
+    {
+      "name": "buy",
+      "args": [
+        {
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "name": "asset",
+          "type": "uint64"
+        },
+        {
+          "name": "nonce",
+          "type": "uint64"
+        },
+        {
+          "name": "buyPay",
+          "type": "pay"
+        },
+        {
+          "name": "quantity",
+          "type": "uint64"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      },
+      "actions": {
+        "create": [],
+        "call": [
+          "NoOp"
+        ]
+      }
+    },
+    {
+      "name": "withdraw",
+      "args": [
+        {
+          "name": "asset",
+          "type": "uint64"
+        },
+        {
+          "name": "nonce",
+          "type": "uint64"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      },
+      "actions": {
+        "create": [],
+        "call": [
+          "NoOp"
+        ]
+      }
+    },
+    {
+      "name": "createApplication",
+      "args": [],
+      "returns": {
+        "type": "void"
+      },
+      "actions": {
+        "create": [
+          "NoOp"
+        ],
+        "call": []
+      }
+    }
+  ],
+  "arcs": [
+    4,
+    56
+  ],
+  "structs": {
+    "forSaleInfo": [
+      {
+        "name": "deposited",
+        "type": "uint64"
+      },
+      {
+        "name": "unitaryPrice",
+        "type": "uint64"
+      }
+    ],
+    "forSaleID": [
+      {
+        "name": "owner",
+        "type": "address"
+      },
+      {
+        "name": "asset",
+        "type": "uint64"
+      },
+      {
+        "name": "nonce",
+        "type": "uint64"
+      }
+    ]
+  },
+  "state": {
+    "schema": {
+      "global": {
+        "bytes": 0,
+        "ints": 0
+      },
+      "local": {
+        "bytes": 0,
+        "ints": 0
+      }
+    },
+    "keys": {
+      "global": {},
+      "local": {},
+      "box": {}
+    },
+    "maps": {
+      "global": {},
+      "local": {},
+      "box": {
+        "listings": {
+          "keyType": "forSaleID",
+          "valueType": "forSaleInfo"
+        }
+      }
+    }
+  },
+  "bareActions": {
+    "create": [],
+    "call": []
+  },
+  "sourceInfo": {
+    "approval": {
+      "sourceInfo": [
+        {
+          "teal": 1,
+          "source": "contracts\\Agroshop.algo.ts:19",
+          "pc": [
+            0
+          ]
+        },
+        {
+          "teal": 2,
+          "source": "contracts\\Agroshop.algo.ts:19",
+          "pc": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "teal": 3,
+          "source": "contracts\\Agroshop.algo.ts:19",
+          "pc": [
+            10,
+            11,
+            12
+          ]
+        },
+        {
+          "teal": 15,
+          "source": "contracts\\Agroshop.algo.ts:19",
+          "pc": [
+            13,
+            14
+          ]
+        },
+        {
+          "teal": 16,
+          "source": "contracts\\Agroshop.algo.ts:19",
+          "pc": [
+            15
+          ]
+        },
+        {
+          "teal": 17,
+          "source": "contracts\\Agroshop.algo.ts:19",
+          "pc": [
+            16,
+            17
+          ]
+        },
+        {
+          "teal": 18,
+          "source": "contracts\\Agroshop.algo.ts:19",
+          "pc": [
+            18
+          ]
+        },
+        {
+          "teal": 19,
+          "source": "contracts\\Agroshop.algo.ts:19",
+          "pc": [
+            19,
+            20
+          ]
+        },
+        {
+          "teal": 20,
+          "source": "contracts\\Agroshop.algo.ts:19",
+          "pc": [
+            21
+          ]
+        },
+        {
+          "teal": 21,
+          "source": "contracts\\Agroshop.algo.ts:19",
+          "pc": [
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47
+          ]
+        },
+        {
+          "teal": 25,
+          "source": "contracts\\Agroshop.algo.ts:19",
+          "errorMessage": "The requested action is not implemented in this contract. Are you using the correct OnComplete? Did you set your app ID?",
+          "pc": [
+            48
+          ]
+        },
+        {
+          "teal": 30,
+          "source": "contracts\\Agroshop.algo.ts:23",
+          "pc": [
+            49,
+            50,
+            51
+          ]
+        },
+        {
+          "teal": 31,
+          "source": "contracts\\Agroshop.algo.ts:23",
+          "pc": [
+            52
+          ]
+        },
+        {
+          "teal": 34,
+          "source": "contracts\\Agroshop.algo.ts:23",
+          "pc": [
+            53,
+            54
+          ]
+        },
+        {
+          "teal": 35,
+          "source": "contracts\\Agroshop.algo.ts:23",
+          "pc": [
+            55
+          ]
+        },
+        {
+          "teal": 36,
+          "source": "contracts\\Agroshop.algo.ts:23",
+          "pc": [
+            56
+          ]
+        },
+        {
+          "teal": 37,
+          "source": "contracts\\Agroshop.algo.ts:23",
+          "pc": [
+            57
+          ]
+        },
+        {
+          "teal": 38,
+          "source": "contracts\\Agroshop.algo.ts:23",
+          "pc": [
+            58,
+            59
+          ]
+        },
+        {
+          "teal": 39,
+          "source": "contracts\\Agroshop.algo.ts:23",
+          "pc": [
+            60
+          ]
+        },
+        {
+          "teal": 40,
+          "source": "contracts\\Agroshop.algo.ts:23",
+          "pc": [
+            61
+          ]
+        },
+        {
+          "teal": 43,
+          "source": "contracts\\Agroshop.algo.ts:23",
+          "errorMessage": "argument 1 (mbrPay) for allowAsset must be a pay transaction",
+          "pc": [
+            62
+          ]
+        },
+        {
+          "teal": 46,
+          "source": "contracts\\Agroshop.algo.ts:23",
+          "pc": [
+            63,
+            64,
+            65
+          ]
+        },
+        {
+          "teal": 47,
+          "source": "contracts\\Agroshop.algo.ts:23",
+          "pc": [
+            66
+          ]
+        },
+        {
+          "teal": 48,
+          "source": "contracts\\Agroshop.algo.ts:23",
+          "pc": [
+            67
+          ]
+        },
+        {
+          "teal": 52,
+          "source": "contracts\\Agroshop.algo.ts:23",
+          "pc": [
+            68,
+            69,
+            70
+          ]
+        },
+        {
+          "teal": 56,
+          "source": "contracts\\Agroshop.algo.ts:24",
+          "pc": [
+            71,
+            72
+          ]
+        },
+        {
+          "teal": 57,
+          "source": "contracts\\Agroshop.algo.ts:24",
+          "pc": [
+            73,
+            74
+          ]
+        },
+        {
+          "teal": 58,
+          "source": "contracts\\Agroshop.algo.ts:24",
+          "pc": [
+            75,
+            76
+          ]
+        },
+        {
+          "teal": 59,
+          "source": "contracts\\Agroshop.algo.ts:24",
+          "pc": [
+            77
+          ]
+        },
+        {
+          "teal": 60,
+          "source": "contracts\\Agroshop.algo.ts:24",
+          "pc": [
+            78
+          ]
+        },
+        {
+          "teal": 61,
+          "source": "contracts\\Agroshop.algo.ts:24",
+          "pc": [
+            79
+          ]
+        },
+        {
+          "teal": 62,
+          "source": "contracts\\Agroshop.algo.ts:24",
+          "pc": [
+            80
+          ]
+        },
+        {
+          "teal": 70,
+          "source": "contracts\\Agroshop.algo.ts:26",
+          "pc": [
+            81,
+            82
+          ]
+        },
+        {
+          "teal": 71,
+          "source": "contracts\\Agroshop.algo.ts:27",
+          "pc": [
+            83,
+            84
+          ]
+        },
+        {
+          "teal": 72,
+          "source": "contracts\\Agroshop.algo.ts:27",
+          "pc": [
+            85,
+            86
+          ]
+        },
+        {
+          "teal": 73,
+          "source": "contracts\\Agroshop.algo.ts:27",
+          "pc": [
+            87
+          ]
+        },
+        {
+          "teal": 76,
+          "source": "contracts\\Agroshop.algo.ts:27",
+          "errorMessage": "transaction verification failed: {\"txn\":\"mbrPay\",\"field\":\"receiver\",\"expected\":\"this.app.address\"}",
+          "pc": [
+            88
+          ]
+        },
+        {
+          "teal": 79,
+          "source": "contracts\\Agroshop.algo.ts:26",
+          "pc": [
+            89,
+            90
+          ]
+        },
+        {
+          "teal": 80,
+          "source": "contracts\\Agroshop.algo.ts:28",
+          "pc": [
+            91,
+            92
+          ]
+        },
+        {
+          "teal": 81,
+          "source": "contracts\\Agroshop.algo.ts:28",
+          "pc": [
+            93,
+            94
+          ]
+        },
+        {
+          "teal": 82,
+          "source": "contracts\\Agroshop.algo.ts:28",
+          "pc": [
+            95
+          ]
+        },
+        {
+          "teal": 85,
+          "source": "contracts\\Agroshop.algo.ts:28",
+          "errorMessage": "transaction verification failed: {\"txn\":\"mbrPay\",\"field\":\"amount\",\"expected\":\"globals.assetOptInMinBalance\"}",
+          "pc": [
+            96
+          ]
+        },
+        {
+          "teal": 93,
+          "source": "contracts\\Agroshop.algo.ts:31",
+          "pc": [
+            97
+          ]
+        },
+        {
+          "teal": 94,
+          "source": "contracts\\Agroshop.algo.ts:31",
+          "pc": [
+            98
+          ]
+        },
+        {
+          "teal": 95,
+          "source": "contracts\\Agroshop.algo.ts:31",
+          "pc": [
+            99,
+            100
+          ]
+        },
+        {
+          "teal": 99,
+          "source": "contracts\\Agroshop.algo.ts:32",
+          "pc": [
+            101,
+            102
+          ]
+        },
+        {
+          "teal": 100,
+          "source": "contracts\\Agroshop.algo.ts:32",
+          "pc": [
+            103,
+            104
+          ]
+        },
+        {
+          "teal": 104,
+          "source": "contracts\\Agroshop.algo.ts:33",
+          "pc": [
+            105
+          ]
+        },
+        {
+          "teal": 105,
+          "source": "contracts\\Agroshop.algo.ts:33",
+          "pc": [
+            106,
+            107
+          ]
+        },
+        {
+          "teal": 109,
+          "source": "contracts\\Agroshop.algo.ts:34",
+          "pc": [
+            108,
+            109
+          ]
+        },
+        {
+          "teal": 110,
+          "source": "contracts\\Agroshop.algo.ts:34",
+          "pc": [
+            110,
+            111
+          ]
+        },
+        {
+          "teal": 113,
+          "source": "contracts\\Agroshop.algo.ts:31",
+          "pc": [
+            112
+          ]
+        },
+        {
+          "teal": 114,
+          "source": "contracts\\Agroshop.algo.ts:31",
+          "pc": [
+            113,
+            114
+          ]
+        },
+        {
+          "teal": 117,
+          "source": "contracts\\Agroshop.algo.ts:31",
+          "pc": [
+            115
+          ]
+        },
+        {
+          "teal": 118,
+          "source": "contracts\\Agroshop.algo.ts:23",
+          "pc": [
+            116
+          ]
+        },
+        {
+          "teal": 123,
+          "source": "contracts\\Agroshop.algo.ts:38",
+          "pc": [
+            117,
+            118,
+            119
+          ]
+        },
+        {
+          "teal": 124,
+          "source": "contracts\\Agroshop.algo.ts:38",
+          "pc": [
+            120
+          ]
+        },
+        {
+          "teal": 127,
+          "source": "contracts\\Agroshop.algo.ts:38",
+          "pc": [
+            121,
+            122,
+            123
+          ]
+        },
+        {
+          "teal": 128,
+          "source": "contracts\\Agroshop.algo.ts:38",
+          "pc": [
+            124
+          ]
+        },
+        {
+          "teal": 131,
+          "source": "contracts\\Agroshop.algo.ts:38",
+          "pc": [
+            125,
+            126
+          ]
+        },
+        {
+          "teal": 132,
+          "source": "contracts\\Agroshop.algo.ts:38",
+          "pc": [
+            127
+          ]
+        },
+        {
+          "teal": 133,
+          "source": "contracts\\Agroshop.algo.ts:38",
+          "pc": [
+            128
+          ]
+        },
+        {
+          "teal": 134,
+          "source": "contracts\\Agroshop.algo.ts:38",
+          "pc": [
+            129
+          ]
+        },
+        {
+          "teal": 135,
+          "source": "contracts\\Agroshop.algo.ts:38",
+          "pc": [
+            130,
+            131
+          ]
+        },
+        {
+          "teal": 136,
+          "source": "contracts\\Agroshop.algo.ts:38",
+          "pc": [
+            132
+          ]
+        },
+        {
+          "teal": 137,
+          "source": "contracts\\Agroshop.algo.ts:38",
+          "pc": [
+            133
+          ]
+        },
+        {
+          "teal": 140,
+          "source": "contracts\\Agroshop.algo.ts:38",
+          "errorMessage": "argument 2 (xfer) for listingDeposit must be a axfer transaction",
+          "pc": [
+            134
+          ]
+        },
+        {
+          "teal": 143,
+          "source": "contracts\\Agroshop.algo.ts:38",
+          "pc": [
+            135,
+            136
+          ]
+        },
+        {
+          "teal": 144,
+          "source": "contracts\\Agroshop.algo.ts:38",
+          "pc": [
+            137,
+            138
+          ]
+        },
+        {
+          "teal": 145,
+          "source": "contracts\\Agroshop.algo.ts:38",
+          "pc": [
+            139
+          ]
+        },
+        {
+          "teal": 146,
+          "source": "contracts\\Agroshop.algo.ts:38",
+          "pc": [
+            140
+          ]
+        },
+        {
+          "teal": 147,
+          "source": "contracts\\Agroshop.algo.ts:38",
+          "pc": [
+            141,
+            142
+          ]
+        },
+        {
+          "teal": 148,
+          "source": "contracts\\Agroshop.algo.ts:38",
+          "pc": [
+            143
+          ]
+        },
+        {
+          "teal": 149,
+          "source": "contracts\\Agroshop.algo.ts:38",
+          "pc": [
+            144
+          ]
+        },
+        {
+          "teal": 152,
+          "source": "contracts\\Agroshop.algo.ts:38",
+          "errorMessage": "argument 3 (mbrPay) for listingDeposit must be a pay transaction",
+          "pc": [
+            145
+          ]
+        },
+        {
+          "teal": 155,
+          "source": "contracts\\Agroshop.algo.ts:38",
+          "pc": [
+            146,
+            147,
+            148
+          ]
+        },
+        {
+          "teal": 156,
+          "source": "contracts\\Agroshop.algo.ts:38",
+          "pc": [
+            149
+          ]
+        },
+        {
+          "teal": 157,
+          "source": "contracts\\Agroshop.algo.ts:38",
+          "pc": [
+            150
+          ]
+        },
+        {
+          "teal": 161,
+          "source": "contracts\\Agroshop.algo.ts:38",
+          "pc": [
+            151,
+            152,
+            153
+          ]
+        },
+        {
+          "teal": 165,
+          "source": "contracts\\Agroshop.algo.ts:39",
+          "pc": [
+            154,
+            155
+          ]
+        },
+        {
+          "teal": 166,
+          "source": "contracts\\Agroshop.algo.ts:39",
+          "pc": [
+            156,
+            157
+          ]
+        },
+        {
+          "teal": 167,
+          "source": "contracts\\Agroshop.algo.ts:39",
+          "pc": [
+            158,
+            159
+          ]
+        },
+        {
+          "teal": 168,
+          "source": "contracts\\Agroshop.algo.ts:39",
+          "pc": [
+            160
+          ]
+        },
+        {
+          "teal": 169,
+          "source": "contracts\\Agroshop.algo.ts:39",
+          "pc": [
+            161
+          ]
+        },
+        {
+          "teal": 170,
+          "source": "contracts\\Agroshop.algo.ts:39",
+          "pc": [
+            162,
+            163
+          ]
+        },
+        {
+          "teal": 171,
+          "source": "contracts\\Agroshop.algo.ts:39",
+          "pc": [
+            164
+          ]
+        },
+        {
+          "teal": 172,
+          "source": "contracts\\Agroshop.algo.ts:39",
+          "pc": [
+            165
+          ]
+        },
+        {
+          "teal": 173,
+          "source": "contracts\\Agroshop.algo.ts:39",
+          "pc": [
+            166
+          ]
+        },
+        {
+          "teal": 174,
+          "source": "contracts\\Agroshop.algo.ts:39",
+          "pc": [
+            167
+          ]
+        },
+        {
+          "teal": 175,
+          "source": "contracts\\Agroshop.algo.ts:39",
+          "pc": [
+            168
+          ]
+        },
+        {
+          "teal": 176,
+          "source": "contracts\\Agroshop.algo.ts:39",
+          "pc": [
+            169
+          ]
+        },
+        {
+          "teal": 177,
+          "source": "contracts\\Agroshop.algo.ts:39",
+          "pc": [
+            170
+          ]
+        },
+        {
+          "teal": 186,
+          "source": "contracts\\Agroshop.algo.ts:41",
+          "pc": [
+            171,
+            172
+          ]
+        },
+        {
+          "teal": 187,
+          "source": "contracts\\Agroshop.algo.ts:42",
+          "pc": [
+            173,
+            174
+          ]
+        },
+        {
+          "teal": 188,
+          "source": "contracts\\Agroshop.algo.ts:42",
+          "pc": [
+            175,
+            176
+          ]
+        },
+        {
+          "teal": 189,
+          "source": "contracts\\Agroshop.algo.ts:42",
+          "pc": [
+            177
+          ]
+        },
+        {
+          "teal": 192,
+          "source": "contracts\\Agroshop.algo.ts:42",
+          "errorMessage": "transaction verification failed: {\"txn\":\"mbrPay\",\"field\":\"sender\",\"expected\":\"this.txn.sender\"}",
+          "pc": [
+            178
+          ]
+        },
+        {
+          "teal": 195,
+          "source": "contracts\\Agroshop.algo.ts:41",
+          "pc": [
+            179,
+            180
+          ]
+        },
+        {
+          "teal": 196,
+          "source": "contracts\\Agroshop.algo.ts:43",
+          "pc": [
+            181,
+            182
+          ]
+        },
+        {
+          "teal": 197,
+          "source": "contracts\\Agroshop.algo.ts:43",
+          "pc": [
+            183,
+            184
+          ]
+        },
+        {
+          "teal": 198,
+          "source": "contracts\\Agroshop.algo.ts:43",
+          "pc": [
+            185
+          ]
+        },
+        {
+          "teal": 201,
+          "source": "contracts\\Agroshop.algo.ts:43",
+          "errorMessage": "transaction verification failed: {\"txn\":\"mbrPay\",\"field\":\"receiver\",\"expected\":\"this.app.address\"}",
+          "pc": [
+            186
+          ]
+        },
+        {
+          "teal": 204,
+          "source": "contracts\\Agroshop.algo.ts:41",
+          "pc": [
+            187,
+            188
+          ]
+        },
+        {
+          "teal": 205,
+          "source": "contracts\\Agroshop.algo.ts:44",
+          "pc": [
+            189,
+            190
+          ]
+        },
+        {
+          "teal": 206,
+          "source": "contracts\\Agroshop.algo.ts:16",
+          "pc": [
+            191,
+            192
+          ]
+        },
+        {
+          "teal": 207,
+          "source": "contracts\\Agroshop.algo.ts:44",
+          "pc": [
+            193
+          ]
+        },
+        {
+          "teal": 210,
+          "source": "contracts\\Agroshop.algo.ts:44",
+          "errorMessage": "transaction verification failed: {\"txn\":\"mbrPay\",\"field\":\"amount\",\"expected\":\"forSaleMbr\"}",
+          "pc": [
+            194
+          ]
+        },
+        {
+          "teal": 219,
+          "source": "contracts\\Agroshop.algo.ts:47",
+          "pc": [
+            195,
+            196
+          ]
+        },
+        {
+          "teal": 220,
+          "source": "contracts\\Agroshop.algo.ts:48",
+          "pc": [
+            197,
+            198
+          ]
+        },
+        {
+          "teal": 221,
+          "source": "contracts\\Agroshop.algo.ts:48",
+          "pc": [
+            199,
+            200
+          ]
+        },
+        {
+          "teal": 222,
+          "source": "contracts\\Agroshop.algo.ts:48",
+          "pc": [
+            201
+          ]
+        },
+        {
+          "teal": 225,
+          "source": "contracts\\Agroshop.algo.ts:48",
+          "errorMessage": "transaction verification failed: {\"txn\":\"xfer\",\"field\":\"sender\",\"expected\":\"this.txn.sender\"}",
+          "pc": [
+            202
+          ]
+        },
+        {
+          "teal": 228,
+          "source": "contracts\\Agroshop.algo.ts:47",
+          "pc": [
+            203,
+            204
+          ]
+        },
+        {
+          "teal": 229,
+          "source": "contracts\\Agroshop.algo.ts:49",
+          "pc": [
+            205,
+            206
+          ]
+        },
+        {
+          "teal": 230,
+          "source": "contracts\\Agroshop.algo.ts:49",
+          "pc": [
+            207,
+            208
+          ]
+        },
+        {
+          "teal": 231,
+          "source": "contracts\\Agroshop.algo.ts:49",
+          "pc": [
+            209
+          ]
+        },
+        {
+          "teal": 234,
+          "source": "contracts\\Agroshop.algo.ts:49",
+          "errorMessage": "transaction verification failed: {\"txn\":\"xfer\",\"field\":\"assetReceiver\",\"expected\":\"this.app.address\"}",
+          "pc": [
+            210
+          ]
+        },
+        {
+          "teal": 237,
+          "source": "contracts\\Agroshop.algo.ts:47",
+          "pc": [
+            211,
+            212
+          ]
+        },
+        {
+          "teal": 238,
+          "source": "contracts\\Agroshop.algo.ts:50",
+          "pc": [
+            213,
+            214
+          ]
+        },
+        {
+          "teal": 239,
+          "source": "contracts\\Agroshop.algo.ts:50",
+          "pc": [
+            215
+          ]
+        },
+        {
+          "teal": 240,
+          "source": "contracts\\Agroshop.algo.ts:50",
+          "pc": [
+            216
+          ]
+        },
+        {
+          "teal": 243,
+          "source": "contracts\\Agroshop.algo.ts:50",
+          "errorMessage": "transaction verification failed: {\"txn\":\"xfer\",\"field\":\"assetAmount\",\"condition\":\"greaterThan\",\"expected\":\">0\"}",
+          "pc": [
+            217
+          ]
+        },
+        {
+          "teal": 250,
+          "source": "contracts\\Agroshop.algo.ts:53",
+          "pc": [
+            218,
+            219
+          ]
+        },
+        {
+          "teal": 251,
+          "source": "contracts\\Agroshop.algo.ts:53",
+          "pc": [
+            220,
+            221
+          ]
+        },
+        {
+          "teal": 252,
+          "source": "contracts\\Agroshop.algo.ts:53",
+          "pc": [
+            222,
+            223
+          ]
+        },
+        {
+          "teal": 253,
+          "source": "contracts\\Agroshop.algo.ts:53",
+          "pc": [
+            224
+          ]
+        },
+        {
+          "teal": 254,
+          "source": "contracts\\Agroshop.algo.ts:53",
+          "pc": [
+            225
+          ]
+        },
+        {
+          "teal": 255,
+          "source": "contracts\\Agroshop.algo.ts:53",
+          "pc": [
+            226,
+            227
+          ]
+        },
+        {
+          "teal": 256,
+          "source": "contracts\\Agroshop.algo.ts:53",
+          "pc": [
+            228
+          ]
+        },
+        {
+          "teal": 257,
+          "source": "contracts\\Agroshop.algo.ts:53",
+          "pc": [
+            229
+          ]
+        },
+        {
+          "teal": 258,
+          "source": "contracts\\Agroshop.algo.ts:54",
+          "pc": [
+            230,
+            231
+          ]
+        },
+        {
+          "teal": 259,
+          "source": "contracts\\Agroshop.algo.ts:54",
+          "pc": [
+            232,
+            233
+          ]
+        },
+        {
+          "teal": 260,
+          "source": "contracts\\Agroshop.algo.ts:54",
+          "pc": [
+            234
+          ]
+        },
+        {
+          "teal": 261,
+          "source": "contracts\\Agroshop.algo.ts:55",
+          "pc": [
+            235,
+            236
+          ]
+        },
+        {
+          "teal": 262,
+          "source": "contracts\\Agroshop.algo.ts:55",
+          "pc": [
+            237
+          ]
+        },
+        {
+          "teal": 263,
+          "source": "contracts\\Agroshop.algo.ts:55",
+          "pc": [
+            238
+          ]
+        },
+        {
+          "teal": 264,
+          "source": "contracts\\Agroshop.algo.ts:53",
+          "pc": [
+            239
+          ]
+        },
+        {
+          "teal": 265,
+          "source": "contracts\\Agroshop.algo.ts:38",
+          "pc": [
+            240
+          ]
+        },
+        {
+          "teal": 270,
+          "source": "contracts\\Agroshop.algo.ts:59",
+          "pc": [
+            241,
+            242,
+            243
+          ]
+        },
+        {
+          "teal": 271,
+          "source": "contracts\\Agroshop.algo.ts:59",
+          "pc": [
+            244
+          ]
+        },
+        {
+          "teal": 274,
+          "source": "contracts\\Agroshop.algo.ts:59",
+          "pc": [
+            245,
+            246
+          ]
+        },
+        {
+          "teal": 275,
+          "source": "contracts\\Agroshop.algo.ts:59",
+          "pc": [
+            247
+          ]
+        },
+        {
+          "teal": 276,
+          "source": "contracts\\Agroshop.algo.ts:59",
+          "pc": [
+            248
+          ]
+        },
+        {
+          "teal": 277,
+          "source": "contracts\\Agroshop.algo.ts:59",
+          "pc": [
+            249
+          ]
+        },
+        {
+          "teal": 278,
+          "source": "contracts\\Agroshop.algo.ts:59",
+          "pc": [
+            250,
+            251
+          ]
+        },
+        {
+          "teal": 279,
+          "source": "contracts\\Agroshop.algo.ts:59",
+          "pc": [
+            252
+          ]
+        },
+        {
+          "teal": 280,
+          "source": "contracts\\Agroshop.algo.ts:59",
+          "pc": [
+            253
+          ]
+        },
+        {
+          "teal": 283,
+          "source": "contracts\\Agroshop.algo.ts:59",
+          "errorMessage": "argument 1 (xfer) for deposit must be a axfer transaction",
+          "pc": [
+            254
+          ]
+        },
+        {
+          "teal": 286,
+          "source": "contracts\\Agroshop.algo.ts:59",
+          "pc": [
+            255,
+            256,
+            257
+          ]
+        },
+        {
+          "teal": 287,
+          "source": "contracts\\Agroshop.algo.ts:59",
+          "pc": [
+            258
+          ]
+        },
+        {
+          "teal": 288,
+          "source": "contracts\\Agroshop.algo.ts:59",
+          "pc": [
+            259
+          ]
+        },
+        {
+          "teal": 292,
+          "source": "contracts\\Agroshop.algo.ts:59",
+          "pc": [
+            260,
+            261,
+            262
+          ]
+        },
+        {
+          "teal": 295,
+          "source": "contracts\\Agroshop.algo.ts:59",
+          "pc": [
+            263
+          ]
+        },
+        {
+          "teal": 296,
+          "source": "contracts\\Agroshop.algo.ts:59",
+          "pc": [
+            264
+          ]
+        },
+        {
+          "teal": 300,
+          "source": "contracts\\Agroshop.algo.ts:60",
+          "pc": [
+            265,
+            266
+          ]
+        },
+        {
+          "teal": 301,
+          "source": "contracts\\Agroshop.algo.ts:60",
+          "pc": [
+            267,
+            268
+          ]
+        },
+        {
+          "teal": 302,
+          "source": "contracts\\Agroshop.algo.ts:60",
+          "pc": [
+            269,
+            270
+          ]
+        },
+        {
+          "teal": 303,
+          "source": "contracts\\Agroshop.algo.ts:60",
+          "pc": [
+            271
+          ]
+        },
+        {
+          "teal": 304,
+          "source": "contracts\\Agroshop.algo.ts:60",
+          "pc": [
+            272
+          ]
+        },
+        {
+          "teal": 305,
+          "source": "contracts\\Agroshop.algo.ts:60",
+          "pc": [
+            273,
+            274
+          ]
+        },
+        {
+          "teal": 306,
+          "source": "contracts\\Agroshop.algo.ts:60",
+          "pc": [
+            275
+          ]
+        },
+        {
+          "teal": 307,
+          "source": "contracts\\Agroshop.algo.ts:60",
+          "pc": [
+            276
+          ]
+        },
+        {
+          "teal": 308,
+          "source": "contracts\\Agroshop.algo.ts:60",
+          "pc": [
+            277
+          ]
+        },
+        {
+          "teal": 309,
+          "source": "contracts\\Agroshop.algo.ts:60",
+          "pc": [
+            278
+          ]
+        },
+        {
+          "teal": 310,
+          "source": "contracts\\Agroshop.algo.ts:60",
+          "pc": [
+            279
+          ]
+        },
+        {
+          "teal": 311,
+          "source": "contracts\\Agroshop.algo.ts:60",
+          "pc": [
+            280
+          ]
+        },
+        {
+          "teal": 320,
+          "source": "contracts\\Agroshop.algo.ts:62",
+          "pc": [
+            281,
+            282
+          ]
+        },
+        {
+          "teal": 321,
+          "source": "contracts\\Agroshop.algo.ts:63",
+          "pc": [
+            283,
+            284
+          ]
+        },
+        {
+          "teal": 322,
+          "source": "contracts\\Agroshop.algo.ts:63",
+          "pc": [
+            285,
+            286
+          ]
+        },
+        {
+          "teal": 323,
+          "source": "contracts\\Agroshop.algo.ts:63",
+          "pc": [
+            287
+          ]
+        },
+        {
+          "teal": 326,
+          "source": "contracts\\Agroshop.algo.ts:63",
+          "errorMessage": "transaction verification failed: {\"txn\":\"xfer\",\"field\":\"sender\",\"expected\":\"this.txn.sender\"}",
+          "pc": [
+            288
+          ]
+        },
+        {
+          "teal": 329,
+          "source": "contracts\\Agroshop.algo.ts:62",
+          "pc": [
+            289,
+            290
+          ]
+        },
+        {
+          "teal": 330,
+          "source": "contracts\\Agroshop.algo.ts:64",
+          "pc": [
+            291,
+            292
+          ]
+        },
+        {
+          "teal": 331,
+          "source": "contracts\\Agroshop.algo.ts:64",
+          "pc": [
+            293,
+            294
+          ]
+        },
+        {
+          "teal": 332,
+          "source": "contracts\\Agroshop.algo.ts:64",
+          "pc": [
+            295
+          ]
+        },
+        {
+          "teal": 335,
+          "source": "contracts\\Agroshop.algo.ts:64",
+          "errorMessage": "transaction verification failed: {\"txn\":\"xfer\",\"field\":\"assetReceiver\",\"expected\":\"this.app.address\"}",
+          "pc": [
+            296
+          ]
+        },
+        {
+          "teal": 338,
+          "source": "contracts\\Agroshop.algo.ts:62",
+          "pc": [
+            297,
+            298
+          ]
+        },
+        {
+          "teal": 339,
+          "source": "contracts\\Agroshop.algo.ts:65",
+          "pc": [
+            299,
+            300
+          ]
+        },
+        {
+          "teal": 340,
+          "source": "contracts\\Agroshop.algo.ts:65",
+          "pc": [
+            301
+          ]
+        },
+        {
+          "teal": 341,
+          "source": "contracts\\Agroshop.algo.ts:65",
+          "pc": [
+            302
+          ]
+        },
+        {
+          "teal": 344,
+          "source": "contracts\\Agroshop.algo.ts:65",
+          "errorMessage": "transaction verification failed: {\"txn\":\"xfer\",\"field\":\"assetAmount\",\"condition\":\"greaterThan\",\"expected\":\">0\"}",
+          "pc": [
+            303
+          ]
+        },
+        {
+          "teal": 349,
+          "source": "contracts\\Agroshop.algo.ts:68",
+          "pc": [
+            304
+          ]
+        },
+        {
+          "teal": 350,
+          "source": "contracts\\Agroshop.algo.ts:68",
+          "pc": [
+            305
+          ]
+        },
+        {
+          "teal": 351,
+          "source": "contracts\\Agroshop.algo.ts:68",
+          "pc": [
+            306,
+            307
+          ]
+        },
+        {
+          "teal": 352,
+          "source": "contracts\\Agroshop.algo.ts:68",
+          "pc": [
+            308,
+            309
+          ]
+        },
+        {
+          "teal": 353,
+          "source": "contracts\\Agroshop.algo.ts:68",
+          "pc": [
+            310,
+            311
+          ]
+        },
+        {
+          "teal": 354,
+          "source": "contracts\\Agroshop.algo.ts:68",
+          "pc": [
+            312
+          ]
+        },
+        {
+          "teal": 355,
+          "source": "contracts\\Agroshop.algo.ts:68",
+          "pc": [
+            313
+          ]
+        },
+        {
+          "teal": 356,
+          "source": "contracts\\Agroshop.algo.ts:68",
+          "pc": [
+            314,
+            315
+          ]
+        },
+        {
+          "teal": 357,
+          "source": "contracts\\Agroshop.algo.ts:68",
+          "pc": [
+            316
+          ]
+        },
+        {
+          "teal": 358,
+          "source": "contracts\\Agroshop.algo.ts:68",
+          "pc": [
+            317
+          ]
+        },
+        {
+          "teal": 359,
+          "source": "contracts\\Agroshop.algo.ts:68",
+          "pc": [
+            318,
+            319
+          ]
+        },
+        {
+          "teal": 360,
+          "source": "contracts\\Agroshop.algo.ts:68",
+          "pc": [
+            320
+          ]
+        },
+        {
+          "teal": 361,
+          "source": "contracts\\Agroshop.algo.ts:68",
+          "pc": [
+            321
+          ]
+        },
+        {
+          "teal": 362,
+          "source": "contracts\\Agroshop.algo.ts:68",
+          "pc": [
+            322,
+            323
+          ]
+        },
+        {
+          "teal": 367,
+          "source": "contracts\\Agroshop.algo.ts:70",
+          "pc": [
+            324
+          ]
+        },
+        {
+          "teal": 368,
+          "source": "contracts\\Agroshop.algo.ts:70",
+          "pc": [
+            325
+          ]
+        },
+        {
+          "teal": 369,
+          "source": "contracts\\Agroshop.algo.ts:70",
+          "pc": [
+            326,
+            327
+          ]
+        },
+        {
+          "teal": 370,
+          "source": "contracts\\Agroshop.algo.ts:70",
+          "pc": [
+            328,
+            329
+          ]
+        },
+        {
+          "teal": 371,
+          "source": "contracts\\Agroshop.algo.ts:70",
+          "pc": [
+            330,
+            331
+          ]
+        },
+        {
+          "teal": 372,
+          "source": "contracts\\Agroshop.algo.ts:70",
+          "pc": [
+            332
+          ]
+        },
+        {
+          "teal": 373,
+          "source": "contracts\\Agroshop.algo.ts:70",
+          "pc": [
+            333
+          ]
+        },
+        {
+          "teal": 374,
+          "source": "contracts\\Agroshop.algo.ts:70",
+          "pc": [
+            334,
+            335
+          ]
+        },
+        {
+          "teal": 375,
+          "source": "contracts\\Agroshop.algo.ts:70",
+          "pc": [
+            336
+          ]
+        },
+        {
+          "teal": 376,
+          "source": "contracts\\Agroshop.algo.ts:70",
+          "pc": [
+            337
+          ]
+        },
+        {
+          "teal": 377,
+          "source": "contracts\\Agroshop.algo.ts:70",
+          "pc": [
+            338,
+            339
+          ]
+        },
+        {
+          "teal": 378,
+          "source": "contracts\\Agroshop.algo.ts:70",
+          "pc": [
+            340
+          ]
+        },
+        {
+          "teal": 379,
+          "source": "contracts\\Agroshop.algo.ts:70",
+          "pc": [
+            341
+          ]
+        },
+        {
+          "teal": 380,
+          "source": "contracts\\Agroshop.algo.ts:70",
+          "pc": [
+            342,
+            343
+          ]
+        },
+        {
+          "teal": 387,
+          "source": "contracts\\Agroshop.algo.ts:74",
+          "pc": [
+            344,
+            345
+          ]
+        },
+        {
+          "teal": 388,
+          "source": "contracts\\Agroshop.algo.ts:74",
+          "pc": [
+            346,
+            347
+          ]
+        },
+        {
+          "teal": 389,
+          "source": "contracts\\Agroshop.algo.ts:74",
+          "pc": [
+            348,
+            349
+          ]
+        },
+        {
+          "teal": 390,
+          "source": "contracts\\Agroshop.algo.ts:74",
+          "pc": [
+            350
+          ]
+        },
+        {
+          "teal": 391,
+          "source": "contracts\\Agroshop.algo.ts:74",
+          "pc": [
+            351
+          ]
+        },
+        {
+          "teal": 392,
+          "source": "contracts\\Agroshop.algo.ts:74",
+          "pc": [
+            352,
+            353
+          ]
+        },
+        {
+          "teal": 393,
+          "source": "contracts\\Agroshop.algo.ts:74",
+          "pc": [
+            354
+          ]
+        },
+        {
+          "teal": 394,
+          "source": "contracts\\Agroshop.algo.ts:74",
+          "pc": [
+            355
+          ]
+        },
+        {
+          "teal": 395,
+          "source": "contracts\\Agroshop.algo.ts:75",
+          "pc": [
+            356,
+            357
+          ]
+        },
+        {
+          "teal": 396,
+          "source": "contracts\\Agroshop.algo.ts:75",
+          "pc": [
+            358,
+            359
+          ]
+        },
+        {
+          "teal": 397,
+          "source": "contracts\\Agroshop.algo.ts:75",
+          "pc": [
+            360,
+            361
+          ]
+        },
+        {
+          "teal": 398,
+          "source": "contracts\\Agroshop.algo.ts:75",
+          "pc": [
+            362
+          ]
+        },
+        {
+          "teal": 399,
+          "source": "contracts\\Agroshop.algo.ts:75",
+          "pc": [
+            363
+          ]
+        },
+        {
+          "teal": 400,
+          "source": "contracts\\Agroshop.algo.ts:76",
+          "pc": [
+            364,
+            365
+          ]
+        },
+        {
+          "teal": 401,
+          "source": "contracts\\Agroshop.algo.ts:76",
+          "pc": [
+            366
+          ]
+        },
+        {
+          "teal": 402,
+          "source": "contracts\\Agroshop.algo.ts:76",
+          "pc": [
+            367
+          ]
+        },
+        {
+          "teal": 403,
+          "source": "contracts\\Agroshop.algo.ts:74",
+          "pc": [
+            368
+          ]
+        },
+        {
+          "teal": 404,
+          "source": "contracts\\Agroshop.algo.ts:59",
+          "pc": [
+            369
+          ]
+        },
+        {
+          "teal": 409,
+          "source": "contracts\\Agroshop.algo.ts:80",
+          "pc": [
+            370,
+            371,
+            372
+          ]
+        },
+        {
+          "teal": 410,
+          "source": "contracts\\Agroshop.algo.ts:80",
+          "pc": [
+            373
+          ]
+        },
+        {
+          "teal": 413,
+          "source": "contracts\\Agroshop.algo.ts:80",
+          "pc": [
+            374,
+            375,
+            376
+          ]
+        },
+        {
+          "teal": 414,
+          "source": "contracts\\Agroshop.algo.ts:80",
+          "pc": [
+            377
+          ]
+        },
+        {
+          "teal": 417,
+          "source": "contracts\\Agroshop.algo.ts:80",
+          "pc": [
+            378,
+            379,
+            380
+          ]
+        },
+        {
+          "teal": 418,
+          "source": "contracts\\Agroshop.algo.ts:80",
+          "pc": [
+            381
+          ]
+        },
+        {
+          "teal": 421,
+          "source": "contracts\\Agroshop.algo.ts:80",
+          "pc": [
+            382,
+            383,
+            384
+          ]
+        },
+        {
+          "teal": 422,
+          "source": "contracts\\Agroshop.algo.ts:80",
+          "pc": [
+            385
+          ]
+        },
+        {
+          "teal": 423,
+          "source": "contracts\\Agroshop.algo.ts:80",
+          "pc": [
+            386
+          ]
+        },
+        {
+          "teal": 427,
+          "source": "contracts\\Agroshop.algo.ts:80",
+          "pc": [
+            387,
+            388,
+            389
+          ]
+        },
+        {
+          "teal": 430,
+          "source": "contracts\\Agroshop.algo.ts:80",
+          "pc": [
+            390
+          ]
+        },
+        {
+          "teal": 434,
+          "source": "contracts\\Agroshop.algo.ts:81",
+          "pc": [
+            391
+          ]
+        },
+        {
+          "teal": 435,
+          "source": "contracts\\Agroshop.algo.ts:81",
+          "pc": [
+            392
+          ]
+        },
+        {
+          "teal": 436,
+          "source": "contracts\\Agroshop.algo.ts:81",
+          "pc": [
+            393,
+            394
+          ]
+        },
+        {
+          "teal": 437,
+          "source": "contracts\\Agroshop.algo.ts:81",
+          "pc": [
+            395,
+            396
+          ]
+        },
+        {
+          "teal": 438,
+          "source": "contracts\\Agroshop.algo.ts:81",
+          "pc": [
+            397
+          ]
+        },
+        {
+          "teal": 439,
+          "source": "contracts\\Agroshop.algo.ts:81",
+          "pc": [
+            398
+          ]
+        },
+        {
+          "teal": 440,
+          "source": "contracts\\Agroshop.algo.ts:81",
+          "pc": [
+            399,
+            400
+          ]
+        },
+        {
+          "teal": 441,
+          "source": "contracts\\Agroshop.algo.ts:81",
+          "pc": [
+            401
+          ]
+        },
+        {
+          "teal": 442,
+          "source": "contracts\\Agroshop.algo.ts:81",
+          "pc": [
+            402
+          ]
+        },
+        {
+          "teal": 443,
+          "source": "contracts\\Agroshop.algo.ts:81",
+          "pc": [
+            403,
+            404
+          ]
+        },
+        {
+          "teal": 444,
+          "source": "contracts\\Agroshop.algo.ts:81",
+          "pc": [
+            405
+          ]
+        },
+        {
+          "teal": 445,
+          "source": "contracts\\Agroshop.algo.ts:81",
+          "pc": [
+            406
+          ]
+        },
+        {
+          "teal": 446,
+          "source": "contracts\\Agroshop.algo.ts:81",
+          "pc": [
+            407,
+            408
+          ]
+        },
+        {
+          "teal": 453,
+          "source": "contracts\\Agroshop.algo.ts:83",
+          "pc": [
+            409,
+            410
+          ]
+        },
+        {
+          "teal": 454,
+          "source": "contracts\\Agroshop.algo.ts:83",
+          "pc": [
+            411,
+            412
+          ]
+        },
+        {
+          "teal": 455,
+          "source": "contracts\\Agroshop.algo.ts:83",
+          "pc": [
+            413
+          ]
+        },
+        {
+          "teal": 456,
+          "source": "contracts\\Agroshop.algo.ts:83",
+          "pc": [
+            414
+          ]
+        },
+        {
+          "teal": 457,
+          "source": "contracts\\Agroshop.algo.ts:83",
+          "pc": [
+            415,
+            416
+          ]
+        },
+        {
+          "teal": 458,
+          "source": "contracts\\Agroshop.algo.ts:83",
+          "pc": [
+            417
+          ]
+        },
+        {
+          "teal": 459,
+          "source": "contracts\\Agroshop.algo.ts:83",
+          "pc": [
+            418
+          ]
+        },
+        {
+          "teal": 460,
+          "source": "contracts\\Agroshop.algo.ts:84",
+          "pc": [
+            419,
+            420
+          ]
+        },
+        {
+          "teal": 461,
+          "source": "contracts\\Agroshop.algo.ts:84",
+          "pc": [
+            421
+          ]
+        },
+        {
+          "teal": 462,
+          "source": "contracts\\Agroshop.algo.ts:85",
+          "pc": [
+            422,
+            423
+          ]
+        },
+        {
+          "teal": 463,
+          "source": "contracts\\Agroshop.algo.ts:85",
+          "pc": [
+            424
+          ]
+        },
+        {
+          "teal": 464,
+          "source": "contracts\\Agroshop.algo.ts:85",
+          "pc": [
+            425
+          ]
+        },
+        {
+          "teal": 465,
+          "source": "contracts\\Agroshop.algo.ts:83",
+          "pc": [
+            426
+          ]
+        },
+        {
+          "teal": 466,
+          "source": "contracts\\Agroshop.algo.ts:80",
+          "pc": [
+            427
+          ]
+        },
+        {
+          "teal": 471,
+          "source": "contracts\\Agroshop.algo.ts:89",
+          "pc": [
+            428,
+            429,
+            430
+          ]
+        },
+        {
+          "teal": 472,
+          "source": "contracts\\Agroshop.algo.ts:89",
+          "pc": [
+            431
+          ]
+        },
+        {
+          "teal": 475,
+          "source": "contracts\\Agroshop.algo.ts:89",
+          "pc": [
+            432,
+            433
+          ]
+        },
+        {
+          "teal": 476,
+          "source": "contracts\\Agroshop.algo.ts:89",
+          "pc": [
+            434
+          ]
+        },
+        {
+          "teal": 477,
+          "source": "contracts\\Agroshop.algo.ts:89",
+          "pc": [
+            435
+          ]
+        },
+        {
+          "teal": 478,
+          "source": "contracts\\Agroshop.algo.ts:89",
+          "pc": [
+            436
+          ]
+        },
+        {
+          "teal": 479,
+          "source": "contracts\\Agroshop.algo.ts:89",
+          "pc": [
+            437,
+            438
+          ]
+        },
+        {
+          "teal": 480,
+          "source": "contracts\\Agroshop.algo.ts:89",
+          "pc": [
+            439
+          ]
+        },
+        {
+          "teal": 481,
+          "source": "contracts\\Agroshop.algo.ts:89",
+          "pc": [
+            440
+          ]
+        },
+        {
+          "teal": 484,
+          "source": "contracts\\Agroshop.algo.ts:89",
+          "errorMessage": "argument 1 (buyPay) for buy must be a pay transaction",
+          "pc": [
+            441
+          ]
+        },
+        {
+          "teal": 487,
+          "source": "contracts\\Agroshop.algo.ts:89",
+          "pc": [
+            442,
+            443,
+            444
+          ]
+        },
+        {
+          "teal": 488,
+          "source": "contracts\\Agroshop.algo.ts:89",
+          "pc": [
+            445
+          ]
+        },
+        {
+          "teal": 491,
+          "source": "contracts\\Agroshop.algo.ts:89",
+          "pc": [
+            446,
+            447,
+            448
+          ]
+        },
+        {
+          "teal": 492,
+          "source": "contracts\\Agroshop.algo.ts:89",
+          "pc": [
+            449
+          ]
+        },
+        {
+          "teal": 495,
+          "source": "contracts\\Agroshop.algo.ts:89",
+          "pc": [
+            450,
+            451,
+            452
+          ]
+        },
+        {
+          "teal": 496,
+          "source": "contracts\\Agroshop.algo.ts:89",
+          "pc": [
+            453
+          ]
+        },
+        {
+          "teal": 497,
+          "source": "contracts\\Agroshop.algo.ts:89",
+          "pc": [
+            454
+          ]
+        },
+        {
+          "teal": 498,
+          "source": "contracts\\Agroshop.algo.ts:89",
+          "pc": [
+            455,
+            456
+          ]
+        },
+        {
+          "teal": 499,
+          "source": "contracts\\Agroshop.algo.ts:89",
+          "pc": [
+            457
+          ]
+        },
+        {
+          "teal": 502,
+          "source": "contracts\\Agroshop.algo.ts:89",
+          "errorMessage": "argument 4 (owner) for buy must be a address",
+          "pc": [
+            458
+          ]
+        },
+        {
+          "teal": 505,
+          "source": "contracts\\Agroshop.algo.ts:89",
+          "pc": [
+            459,
+            460,
+            461
+          ]
+        },
+        {
+          "teal": 506,
+          "source": "contracts\\Agroshop.algo.ts:89",
+          "pc": [
+            462
+          ]
+        },
+        {
+          "teal": 507,
+          "source": "contracts\\Agroshop.algo.ts:89",
+          "pc": [
+            463
+          ]
+        },
+        {
+          "teal": 511,
+          "source": "contracts\\Agroshop.algo.ts:89",
+          "pc": [
+            464,
+            465,
+            466
+          ]
+        },
+        {
+          "teal": 514,
+          "source": "contracts\\Agroshop.algo.ts:89",
+          "pc": [
+            467
+          ]
+        },
+        {
+          "teal": 515,
+          "source": "contracts\\Agroshop.algo.ts:89",
+          "pc": [
+            468,
+            469
+          ]
+        },
+        {
+          "teal": 519,
+          "source": "contracts\\Agroshop.algo.ts:90",
+          "pc": [
+            470
+          ]
+        },
+        {
+          "teal": 520,
+          "source": "contracts\\Agroshop.algo.ts:90",
+          "pc": [
+            471
+          ]
+        },
+        {
+          "teal": 521,
+          "source": "contracts\\Agroshop.algo.ts:90",
+          "pc": [
+            472,
+            473
+          ]
+        },
+        {
+          "teal": 522,
+          "source": "contracts\\Agroshop.algo.ts:90",
+          "pc": [
+            474,
+            475
+          ]
+        },
+        {
+          "teal": 523,
+          "source": "contracts\\Agroshop.algo.ts:90",
+          "pc": [
+            476
+          ]
+        },
+        {
+          "teal": 524,
+          "source": "contracts\\Agroshop.algo.ts:90",
+          "pc": [
+            477
+          ]
+        },
+        {
+          "teal": 525,
+          "source": "contracts\\Agroshop.algo.ts:90",
+          "pc": [
+            478,
+            479
+          ]
+        },
+        {
+          "teal": 526,
+          "source": "contracts\\Agroshop.algo.ts:90",
+          "pc": [
+            480
+          ]
+        },
+        {
+          "teal": 527,
+          "source": "contracts\\Agroshop.algo.ts:90",
+          "pc": [
+            481
+          ]
+        },
+        {
+          "teal": 528,
+          "source": "contracts\\Agroshop.algo.ts:90",
+          "pc": [
+            482,
+            483
+          ]
+        },
+        {
+          "teal": 529,
+          "source": "contracts\\Agroshop.algo.ts:90",
+          "pc": [
+            484
+          ]
+        },
+        {
+          "teal": 530,
+          "source": "contracts\\Agroshop.algo.ts:90",
+          "pc": [
+            485
+          ]
+        },
+        {
+          "teal": 531,
+          "source": "contracts\\Agroshop.algo.ts:90",
+          "pc": [
+            486,
+            487
+          ]
+        },
+        {
+          "teal": 535,
+          "source": "contracts\\Agroshop.algo.ts:91",
+          "pc": [
+            488
+          ]
+        },
+        {
+          "teal": 536,
+          "source": "contracts\\Agroshop.algo.ts:91",
+          "pc": [
+            489
+          ]
+        },
+        {
+          "teal": 537,
+          "source": "contracts\\Agroshop.algo.ts:91",
+          "pc": [
+            490,
+            491
+          ]
+        },
+        {
+          "teal": 538,
+          "source": "contracts\\Agroshop.algo.ts:91",
+          "pc": [
+            492,
+            493
+          ]
+        },
+        {
+          "teal": 539,
+          "source": "contracts\\Agroshop.algo.ts:91",
+          "pc": [
+            494
+          ]
+        },
+        {
+          "teal": 540,
+          "source": "contracts\\Agroshop.algo.ts:91",
+          "pc": [
+            495
+          ]
+        },
+        {
+          "teal": 541,
+          "source": "contracts\\Agroshop.algo.ts:91",
+          "pc": [
+            496,
+            497
+          ]
+        },
+        {
+          "teal": 542,
+          "source": "contracts\\Agroshop.algo.ts:91",
+          "pc": [
+            498
+          ]
+        },
+        {
+          "teal": 543,
+          "source": "contracts\\Agroshop.algo.ts:91",
+          "pc": [
+            499
+          ]
+        },
+        {
+          "teal": 544,
+          "source": "contracts\\Agroshop.algo.ts:91",
+          "pc": [
+            500,
+            501
+          ]
+        },
+        {
+          "teal": 545,
+          "source": "contracts\\Agroshop.algo.ts:91",
+          "pc": [
+            502
+          ]
+        },
+        {
+          "teal": 546,
+          "source": "contracts\\Agroshop.algo.ts:91",
+          "pc": [
+            503
+          ]
+        },
+        {
+          "teal": 547,
+          "source": "contracts\\Agroshop.algo.ts:91",
+          "pc": [
+            504,
+            505
+          ]
+        },
+        {
+          "teal": 551,
+          "source": "contracts\\Agroshop.algo.ts:93",
+          "pc": [
+            506,
+            507
+          ]
+        },
+        {
+          "teal": 552,
+          "source": "contracts\\Agroshop.algo.ts:93",
+          "pc": [
+            508,
+            509
+          ]
+        },
+        {
+          "teal": 553,
+          "source": "contracts\\Agroshop.algo.ts:93",
+          "pc": [
+            510
+          ]
+        },
+        {
+          "teal": 554,
+          "source": "contracts\\Agroshop.algo.ts:93",
+          "pc": [
+            511,
+            512
+          ]
+        },
+        {
+          "teal": 562,
+          "source": "contracts\\Agroshop.algo.ts:95",
+          "pc": [
+            513,
+            514
+          ]
+        },
+        {
+          "teal": 563,
+          "source": "contracts\\Agroshop.algo.ts:96",
+          "pc": [
+            515,
+            516
+          ]
+        },
+        {
+          "teal": 564,
+          "source": "contracts\\Agroshop.algo.ts:96",
+          "pc": [
+            517,
+            518
+          ]
+        },
+        {
+          "teal": 565,
+          "source": "contracts\\Agroshop.algo.ts:96",
+          "pc": [
+            519
+          ]
+        },
+        {
+          "teal": 568,
+          "source": "contracts\\Agroshop.algo.ts:96",
+          "errorMessage": "transaction verification failed: {\"txn\":\"buyPay\",\"field\":\"sender\",\"expected\":\"this.txn.sender\"}",
+          "pc": [
+            520
+          ]
+        },
+        {
+          "teal": 571,
+          "source": "contracts\\Agroshop.algo.ts:95",
+          "pc": [
+            521,
+            522
+          ]
+        },
+        {
+          "teal": 572,
+          "source": "contracts\\Agroshop.algo.ts:97",
+          "pc": [
+            523,
+            524
+          ]
+        },
+        {
+          "teal": 573,
+          "source": "contracts\\Agroshop.algo.ts:97",
+          "pc": [
+            525,
+            526
+          ]
+        },
+        {
+          "teal": 574,
+          "source": "contracts\\Agroshop.algo.ts:97",
+          "pc": [
+            527
+          ]
+        },
+        {
+          "teal": 577,
+          "source": "contracts\\Agroshop.algo.ts:97",
+          "errorMessage": "transaction verification failed: {\"txn\":\"buyPay\",\"field\":\"receiver\",\"expected\":\"owner\"}",
+          "pc": [
+            528
+          ]
+        },
+        {
+          "teal": 585,
+          "source": "contracts\\Agroshop.algo.ts:99",
+          "pc": [
+            529
+          ]
+        },
+        {
+          "teal": 586,
+          "source": "contracts\\Agroshop.algo.ts:99",
+          "pc": [
+            530
+          ]
+        },
+        {
+          "teal": 587,
+          "source": "contracts\\Agroshop.algo.ts:99",
+          "pc": [
+            531,
+            532
+          ]
+        },
+        {
+          "teal": 591,
+          "source": "contracts\\Agroshop.algo.ts:100",
+          "pc": [
+            533,
+            534
+          ]
+        },
+        {
+          "teal": 592,
+          "source": "contracts\\Agroshop.algo.ts:100",
+          "pc": [
+            535,
+            536
+          ]
+        },
+        {
+          "teal": 596,
+          "source": "contracts\\Agroshop.algo.ts:101",
+          "pc": [
+            537,
+            538
+          ]
+        },
+        {
+          "teal": 597,
+          "source": "contracts\\Agroshop.algo.ts:101",
+          "pc": [
+            539,
+            540
+          ]
+        },
+        {
+          "teal": 601,
+          "source": "contracts\\Agroshop.algo.ts:102",
+          "pc": [
+            541,
+            542
+          ]
+        },
+        {
+          "teal": 602,
+          "source": "contracts\\Agroshop.algo.ts:102",
+          "pc": [
+            543,
+            544
+          ]
+        },
+        {
+          "teal": 605,
+          "source": "contracts\\Agroshop.algo.ts:99",
+          "pc": [
+            545
+          ]
+        },
+        {
+          "teal": 606,
+          "source": "contracts\\Agroshop.algo.ts:99",
+          "pc": [
+            546,
+            547
+          ]
+        },
+        {
+          "teal": 609,
+          "source": "contracts\\Agroshop.algo.ts:99",
+          "pc": [
+            548
+          ]
+        },
+        {
+          "teal": 616,
+          "source": "contracts\\Agroshop.algo.ts:105",
+          "pc": [
+            549,
+            550
+          ]
+        },
+        {
+          "teal": 617,
+          "source": "contracts\\Agroshop.algo.ts:105",
+          "pc": [
+            551,
+            552
+          ]
+        },
+        {
+          "teal": 618,
+          "source": "contracts\\Agroshop.algo.ts:105",
+          "pc": [
+            553
+          ]
+        },
+        {
+          "teal": 619,
+          "source": "contracts\\Agroshop.algo.ts:105",
+          "pc": [
+            554
+          ]
+        },
+        {
+          "teal": 620,
+          "source": "contracts\\Agroshop.algo.ts:105",
+          "pc": [
+            555,
+            556
+          ]
+        },
+        {
+          "teal": 621,
+          "source": "contracts\\Agroshop.algo.ts:105",
+          "pc": [
+            557
+          ]
+        },
+        {
+          "teal": 622,
+          "source": "contracts\\Agroshop.algo.ts:105",
+          "pc": [
+            558
+          ]
+        },
+        {
+          "teal": 623,
+          "source": "contracts\\Agroshop.algo.ts:106",
+          "pc": [
+            559,
+            560
+          ]
+        },
+        {
+          "teal": 624,
+          "source": "contracts\\Agroshop.algo.ts:106",
+          "pc": [
+            561,
+            562
+          ]
+        },
+        {
+          "teal": 625,
+          "source": "contracts\\Agroshop.algo.ts:106",
+          "pc": [
+            563
+          ]
+        },
+        {
+          "teal": 626,
+          "source": "contracts\\Agroshop.algo.ts:106",
+          "pc": [
+            564
+          ]
+        },
+        {
+          "teal": 627,
+          "source": "contracts\\Agroshop.algo.ts:107",
+          "pc": [
+            565,
+            566
+          ]
+        },
+        {
+          "teal": 628,
+          "source": "contracts\\Agroshop.algo.ts:107",
+          "pc": [
+            567
+          ]
+        },
+        {
+          "teal": 629,
+          "source": "contracts\\Agroshop.algo.ts:107",
+          "pc": [
+            568
+          ]
+        },
+        {
+          "teal": 630,
+          "source": "contracts\\Agroshop.algo.ts:105",
+          "pc": [
+            569
+          ]
+        },
+        {
+          "teal": 631,
+          "source": "contracts\\Agroshop.algo.ts:89",
+          "pc": [
+            570
+          ]
+        },
+        {
+          "teal": 636,
+          "source": "contracts\\Agroshop.algo.ts:111",
+          "pc": [
+            571,
+            572,
+            573
+          ]
+        },
+        {
+          "teal": 637,
+          "source": "contracts\\Agroshop.algo.ts:111",
+          "pc": [
+            574
+          ]
+        },
+        {
+          "teal": 640,
+          "source": "contracts\\Agroshop.algo.ts:111",
+          "pc": [
+            575,
+            576,
+            577
+          ]
+        },
+        {
+          "teal": 641,
+          "source": "contracts\\Agroshop.algo.ts:111",
+          "pc": [
+            578
+          ]
+        },
+        {
+          "teal": 644,
+          "source": "contracts\\Agroshop.algo.ts:111",
+          "pc": [
+            579,
+            580,
+            581
+          ]
+        },
+        {
+          "teal": 645,
+          "source": "contracts\\Agroshop.algo.ts:111",
+          "pc": [
+            582
+          ]
+        },
+        {
+          "teal": 646,
+          "source": "contracts\\Agroshop.algo.ts:111",
+          "pc": [
+            583
+          ]
+        },
+        {
+          "teal": 650,
+          "source": "contracts\\Agroshop.algo.ts:111",
+          "pc": [
+            584,
+            585,
+            586
+          ]
+        },
+        {
+          "teal": 653,
+          "source": "contracts\\Agroshop.algo.ts:111",
+          "pc": [
+            587
+          ]
+        },
+        {
+          "teal": 657,
+          "source": "contracts\\Agroshop.algo.ts:112",
+          "pc": [
+            588
+          ]
+        },
+        {
+          "teal": 658,
+          "source": "contracts\\Agroshop.algo.ts:112",
+          "pc": [
+            589
+          ]
+        },
+        {
+          "teal": 659,
+          "source": "contracts\\Agroshop.algo.ts:112",
+          "pc": [
+            590,
+            591
+          ]
+        },
+        {
+          "teal": 660,
+          "source": "contracts\\Agroshop.algo.ts:112",
+          "pc": [
+            592,
+            593
+          ]
+        },
+        {
+          "teal": 661,
+          "source": "contracts\\Agroshop.algo.ts:112",
+          "pc": [
+            594
+          ]
+        },
+        {
+          "teal": 662,
+          "source": "contracts\\Agroshop.algo.ts:112",
+          "pc": [
+            595
+          ]
+        },
+        {
+          "teal": 663,
+          "source": "contracts\\Agroshop.algo.ts:112",
+          "pc": [
+            596,
+            597
+          ]
+        },
+        {
+          "teal": 664,
+          "source": "contracts\\Agroshop.algo.ts:112",
+          "pc": [
+            598
+          ]
+        },
+        {
+          "teal": 665,
+          "source": "contracts\\Agroshop.algo.ts:112",
+          "pc": [
+            599
+          ]
+        },
+        {
+          "teal": 666,
+          "source": "contracts\\Agroshop.algo.ts:112",
+          "pc": [
+            600,
+            601
+          ]
+        },
+        {
+          "teal": 667,
+          "source": "contracts\\Agroshop.algo.ts:112",
+          "pc": [
+            602
+          ]
+        },
+        {
+          "teal": 668,
+          "source": "contracts\\Agroshop.algo.ts:112",
+          "pc": [
+            603
+          ]
+        },
+        {
+          "teal": 669,
+          "source": "contracts\\Agroshop.algo.ts:112",
+          "pc": [
+            604,
+            605
+          ]
+        },
+        {
+          "teal": 673,
+          "source": "contracts\\Agroshop.algo.ts:114",
+          "pc": [
+            606,
+            607
+          ]
+        },
+        {
+          "teal": 674,
+          "source": "contracts\\Agroshop.algo.ts:114",
+          "pc": [
+            608,
+            609
+          ]
+        },
+        {
+          "teal": 675,
+          "source": "contracts\\Agroshop.algo.ts:114",
+          "pc": [
+            610
+          ]
+        },
+        {
+          "teal": 676,
+          "source": "contracts\\Agroshop.algo.ts:114",
+          "pc": [
+            611
+          ]
+        },
+        {
+          "teal": 677,
+          "source": "contracts\\Agroshop.algo.ts:114",
+          "pc": [
+            612,
+            613
+          ]
+        },
+        {
+          "teal": 678,
+          "source": "contracts\\Agroshop.algo.ts:114",
+          "pc": [
+            614
+          ]
+        },
+        {
+          "teal": 679,
+          "source": "contracts\\Agroshop.algo.ts:114",
+          "pc": [
+            615
+          ]
+        },
+        {
+          "teal": 680,
+          "source": "contracts\\Agroshop.algo.ts:114",
+          "pc": [
+            616
+          ]
+        },
+        {
+          "teal": 687,
+          "source": "contracts\\Agroshop.algo.ts:116",
+          "pc": [
+            617
+          ]
+        },
+        {
+          "teal": 688,
+          "source": "contracts\\Agroshop.algo.ts:116",
+          "pc": [
+            618
+          ]
+        },
+        {
+          "teal": 689,
+          "source": "contracts\\Agroshop.algo.ts:116",
+          "pc": [
+            619,
+            620
+          ]
+        },
+        {
+          "teal": 693,
+          "source": "contracts\\Agroshop.algo.ts:117",
+          "pc": [
+            621,
+            622
+          ]
+        },
+        {
+          "teal": 694,
+          "source": "contracts\\Agroshop.algo.ts:117",
+          "pc": [
+            623,
+            624
+          ]
+        },
+        {
+          "teal": 698,
+          "source": "contracts\\Agroshop.algo.ts:16",
+          "pc": [
+            625,
+            626
+          ]
+        },
+        {
+          "teal": 699,
+          "source": "contracts\\Agroshop.algo.ts:118",
+          "pc": [
+            627,
+            628
+          ]
+        },
+        {
+          "teal": 702,
+          "source": "contracts\\Agroshop.algo.ts:116",
+          "pc": [
+            629
+          ]
+        },
+        {
+          "teal": 703,
+          "source": "contracts\\Agroshop.algo.ts:116",
+          "pc": [
+            630,
+            631
+          ]
+        },
+        {
+          "teal": 706,
+          "source": "contracts\\Agroshop.algo.ts:116",
+          "pc": [
+            632
+          ]
+        },
+        {
+          "teal": 714,
+          "source": "contracts\\Agroshop.algo.ts:121",
+          "pc": [
+            633
+          ]
+        },
+        {
+          "teal": 715,
+          "source": "contracts\\Agroshop.algo.ts:121",
+          "pc": [
+            634
+          ]
+        },
+        {
+          "teal": 716,
+          "source": "contracts\\Agroshop.algo.ts:121",
+          "pc": [
+            635,
+            636
+          ]
+        },
+        {
+          "teal": 720,
+          "source": "contracts\\Agroshop.algo.ts:122",
+          "pc": [
+            637,
+            638
+          ]
+        },
+        {
+          "teal": 721,
+          "source": "contracts\\Agroshop.algo.ts:122",
+          "pc": [
+            639,
+            640
+          ]
+        },
+        {
+          "teal": 725,
+          "source": "contracts\\Agroshop.algo.ts:123",
+          "pc": [
+            641,
+            642
+          ]
+        },
+        {
+          "teal": 726,
+          "source": "contracts\\Agroshop.algo.ts:123",
+          "pc": [
+            643,
+            644
+          ]
+        },
+        {
+          "teal": 730,
+          "source": "contracts\\Agroshop.algo.ts:124",
+          "pc": [
+            645,
+            646
+          ]
+        },
+        {
+          "teal": 731,
+          "source": "contracts\\Agroshop.algo.ts:124",
+          "pc": [
+            647,
+            648
+          ]
+        },
+        {
+          "teal": 734,
+          "source": "contracts\\Agroshop.algo.ts:121",
+          "pc": [
+            649
+          ]
+        },
+        {
+          "teal": 735,
+          "source": "contracts\\Agroshop.algo.ts:121",
+          "pc": [
+            650,
+            651
+          ]
+        },
+        {
+          "teal": 738,
+          "source": "contracts\\Agroshop.algo.ts:121",
+          "pc": [
+            652
+          ]
+        },
+        {
+          "teal": 739,
+          "source": "contracts\\Agroshop.algo.ts:111",
+          "pc": [
+            653
+          ]
+        },
+        {
+          "teal": 742,
+          "source": "contracts\\Agroshop.algo.ts:19",
+          "pc": [
+            654
+          ]
+        },
+        {
+          "teal": 743,
+          "source": "contracts\\Agroshop.algo.ts:19",
+          "pc": [
+            655
+          ]
+        },
+        {
+          "teal": 746,
+          "source": "contracts\\Agroshop.algo.ts:19",
+          "pc": [
+            656,
+            657,
+            658,
+            659,
+            660,
+            661
+          ]
+        },
+        {
+          "teal": 747,
+          "source": "contracts\\Agroshop.algo.ts:19",
+          "pc": [
+            662,
+            663,
+            664
+          ]
+        },
+        {
+          "teal": 748,
+          "source": "contracts\\Agroshop.algo.ts:19",
+          "pc": [
+            665,
+            666,
+            667,
+            668
+          ]
+        },
+        {
+          "teal": 751,
+          "source": "contracts\\Agroshop.algo.ts:19",
+          "errorMessage": "this contract does not implement the given ABI method for create NoOp",
+          "pc": [
+            669
+          ]
+        },
+        {
+          "teal": 754,
+          "source": "contracts\\Agroshop.algo.ts:19",
+          "pc": [
+            670,
+            671,
+            672,
+            673,
+            674,
+            675
+          ]
+        },
+        {
+          "teal": 755,
+          "source": "contracts\\Agroshop.algo.ts:19",
+          "pc": [
+            676,
+            677,
+            678,
+            679,
+            680,
+            681
+          ]
+        },
+        {
+          "teal": 756,
+          "source": "contracts\\Agroshop.algo.ts:19",
+          "pc": [
+            682,
+            683,
+            684,
+            685,
+            686,
+            687
+          ]
+        },
+        {
+          "teal": 757,
+          "source": "contracts\\Agroshop.algo.ts:19",
+          "pc": [
+            688,
+            689,
+            690,
+            691,
+            692,
+            693
+          ]
+        },
+        {
+          "teal": 758,
+          "source": "contracts\\Agroshop.algo.ts:19",
+          "pc": [
+            694,
+            695,
+            696,
+            697,
+            698,
+            699
+          ]
+        },
+        {
+          "teal": 759,
+          "source": "contracts\\Agroshop.algo.ts:19",
+          "pc": [
+            700,
+            701,
+            702,
+            703,
+            704,
+            705
+          ]
+        },
+        {
+          "teal": 760,
+          "source": "contracts\\Agroshop.algo.ts:19",
+          "pc": [
+            706,
+            707,
+            708
+          ]
+        },
+        {
+          "teal": 761,
+          "source": "contracts\\Agroshop.algo.ts:19",
+          "pc": [
+            709,
+            710,
+            711,
+            712,
+            713,
+            714,
+            715,
+            716,
+            717,
+            718,
+            719,
+            720,
+            721,
+            722
+          ]
+        },
+        {
+          "teal": 764,
+          "source": "contracts\\Agroshop.algo.ts:19",
+          "errorMessage": "this contract does not implement the given ABI method for call NoOp",
+          "pc": [
+            723
+          ]
+        }
+      ],
+      "pcOffsetMethod": "none"
+    },
+    "clear": {
+      "sourceInfo": [],
+      "pcOffsetMethod": "none"
+    }
+  },
+  "source": {
+    "approval": "I3ByYWdtYSB2ZXJzaW9uIDEwCmludGNibG9jayAxIDAgOCA0IDQ3MzAwCmJ5dGVjYmxvY2sgMHgKCi8vIFRoaXMgVEVBTCB3YXMgZ2VuZXJhdGVkIGJ5IFRFQUxTY3JpcHQgdjAuMTA1LjQKLy8gaHR0cHM6Ly9naXRodWIuY29tL2FsZ29yYW5kZm91bmRhdGlvbi9URUFMU2NyaXB0CgovLyBUaGlzIGNvbnRyYWN0IGlzIGNvbXBsaWFudCB3aXRoIGFuZC9vciBpbXBsZW1lbnRzIHRoZSBmb2xsb3dpbmcgQVJDczogWyBBUkM0IF0KCi8vIFRoZSBmb2xsb3dpbmcgdGVuIGxpbmVzIG9mIFRFQUwgaGFuZGxlIGluaXRpYWwgcHJvZ3JhbSBmbG93Ci8vIFRoaXMgcGF0dGVybiBpcyB1c2VkIHRvIG1ha2UgaXQgZWFzeSBmb3IgYW55b25lIHRvIHBhcnNlIHRoZSBzdGFydCBvZiB0aGUgcHJvZ3JhbSBhbmQgZGV0ZXJtaW5lIGlmIGEgc3BlY2lmaWMgYWN0aW9uIGlzIGFsbG93ZWQKLy8gSGVyZSwgYWN0aW9uIHJlZmVycyB0byB0aGUgT25Db21wbGV0ZSBpbiBjb21iaW5hdGlvbiB3aXRoIHdoZXRoZXIgdGhlIGFwcCBpcyBiZWluZyBjcmVhdGVkIG9yIGNhbGxlZAovLyBFdmVyeSBwb3NzaWJsZSBhY3Rpb24gZm9yIHRoaXMgY29udHJhY3QgaXMgcmVwcmVzZW50ZWQgaW4gdGhlIHN3aXRjaCBzdGF0ZW1lbnQKLy8gSWYgdGhlIGFjdGlvbiBpcyBub3QgaW1wbGVtZW50ZWQgaW4gdGhlIGNvbnRyYWN0LCBpdHMgcmVzcGVjdGl2ZSBicmFuY2ggd2lsbCBiZSAiKk5PVF9JTVBMRU1FTlRFRCIgd2hpY2gganVzdCBjb250YWlucyAiZXJyIgp0eG4gQXBwbGljYXRpb25JRAohCnB1c2hpbnQgNgoqCnR4biBPbkNvbXBsZXRpb24KKwpzd2l0Y2ggKmNhbGxfTm9PcCAqTk9UX0lNUExFTUVOVEVEICpOT1RfSU1QTEVNRU5URUQgKk5PVF9JTVBMRU1FTlRFRCAqTk9UX0lNUExFTUVOVEVEICpOT1RfSU1QTEVNRU5URUQgKmNyZWF0ZV9Ob09wICpOT1RfSU1QTEVNRU5URUQgKk5PVF9JTVBMRU1FTlRFRCAqTk9UX0lNUExFTUVOVEVEICpOT1RfSU1QTEVNRU5URUQgKk5PVF9JTVBMRU1FTlRFRAoKKk5PVF9JTVBMRU1FTlRFRDoKCS8vIFRoZSByZXF1ZXN0ZWQgYWN0aW9uIGlzIG5vdCBpbXBsZW1lbnRlZCBpbiB0aGlzIGNvbnRyYWN0LiBBcmUgeW91IHVzaW5nIHRoZSBjb3JyZWN0IE9uQ29tcGxldGU/IERpZCB5b3Ugc2V0IHlvdXIgYXBwIElEPwoJZXJyCgovLyBhbGxvd0Fzc2V0KHBheSx1aW50NjQpdm9pZAoqYWJpX3JvdXRlX2FsbG93QXNzZXQ6CgkvLyBhc3NldDogdWludDY0Cgl0eG5hIEFwcGxpY2F0aW9uQXJncyAxCglidG9pCgoJLy8gbWJyUGF5OiBwYXkKCXR4biBHcm91cEluZGV4CglpbnRjIDAgLy8gMQoJLQoJZHVwCglndHhucyBUeXBlRW51bQoJaW50YyAwIC8vICBwYXkKCT09CgoJLy8gYXJndW1lbnQgMSAobWJyUGF5KSBmb3IgYWxsb3dBc3NldCBtdXN0IGJlIGEgcGF5IHRyYW5zYWN0aW9uCglhc3NlcnQKCgkvLyBleGVjdXRlIGFsbG93QXNzZXQocGF5LHVpbnQ2NCl2b2lkCgljYWxsc3ViIGFsbG93QXNzZXQKCWludGMgMCAvLyAxCglyZXR1cm4KCi8vIGFsbG93QXNzZXQobWJyUGF5OiBQYXlUeG4sIGFzc2V0OiBBc3NldElEKTogdm9pZAphbGxvd0Fzc2V0OgoJcHJvdG8gMiAwCgoJLy8gY29udHJhY3RzXEFncm9zaG9wLmFsZ28udHM6MjQKCS8vIGFzc2VydCghdGhpcy5hcHAuYWRkcmVzcy5pc09wdGVkSW5Ub0Fzc2V0KGFzc2V0KSkKCWdsb2JhbCBDdXJyZW50QXBwbGljYXRpb25BZGRyZXNzCglmcmFtZV9kaWcgLTIgLy8gYXNzZXQ6IEFzc2V0SUQKCWFzc2V0X2hvbGRpbmdfZ2V0IEFzc2V0QmFsYW5jZQoJc3dhcAoJcG9wCgkhCglhc3NlcnQKCgkvLyBjb250cmFjdHNcQWdyb3Nob3AuYWxnby50czoyNgoJLy8gdmVyaWZ5UGF5VHhuKG1iclBheSwgewoJLy8gICAgICAgcmVjZWl2ZXI6IHRoaXMuYXBwLmFkZHJlc3MsCgkvLyAgICAgICBhbW91bnQ6IGdsb2JhbHMuYXNzZXRPcHRJbk1pbkJhbGFuY2UsCgkvLyAgICAgfSkKCS8vIHZlcmlmeSByZWNlaXZlcgoJZnJhbWVfZGlnIC0xIC8vIG1iclBheTogUGF5VHhuCglndHhucyBSZWNlaXZlcgoJZ2xvYmFsIEN1cnJlbnRBcHBsaWNhdGlvbkFkZHJlc3MKCT09CgoJLy8gdHJhbnNhY3Rpb24gdmVyaWZpY2F0aW9uIGZhaWxlZDogeyJ0eG4iOiJtYnJQYXkiLCJmaWVsZCI6InJlY2VpdmVyIiwiZXhwZWN0ZWQiOiJ0aGlzLmFwcC5hZGRyZXNzIn0KCWFzc2VydAoKCS8vIHZlcmlmeSBhbW91bnQKCWZyYW1lX2RpZyAtMSAvLyBtYnJQYXk6IFBheVR4bgoJZ3R4bnMgQW1vdW50CglnbG9iYWwgQXNzZXRPcHRJbk1pbkJhbGFuY2UKCT09CgoJLy8gdHJhbnNhY3Rpb24gdmVyaWZpY2F0aW9uIGZhaWxlZDogeyJ0eG4iOiJtYnJQYXkiLCJmaWVsZCI6ImFtb3VudCIsImV4cGVjdGVkIjoiZ2xvYmFscy5hc3NldE9wdEluTWluQmFsYW5jZSJ9Cglhc3NlcnQKCgkvLyBjb250cmFjdHNcQWdyb3Nob3AuYWxnby50czozMQoJLy8gc2VuZEFzc2V0VHJhbnNmZXIoewoJLy8gICAgICAgeGZlckFzc2V0OiBhc3NldCwKCS8vICAgICAgIGFzc2V0QW1vdW50OiAwLAoJLy8gICAgICAgYXNzZXRSZWNlaXZlcjogdGhpcy5hcHAuYWRkcmVzcywKCS8vICAgICB9KQoJaXR4bl9iZWdpbgoJaW50YyAzIC8vICBheGZlcgoJaXR4bl9maWVsZCBUeXBlRW51bQoKCS8vIGNvbnRyYWN0c1xBZ3Jvc2hvcC5hbGdvLnRzOjMyCgkvLyB4ZmVyQXNzZXQ6IGFzc2V0CglmcmFtZV9kaWcgLTIgLy8gYXNzZXQ6IEFzc2V0SUQKCWl0eG5fZmllbGQgWGZlckFzc2V0CgoJLy8gY29udHJhY3RzXEFncm9zaG9wLmFsZ28udHM6MzMKCS8vIGFzc2V0QW1vdW50OiAwCglpbnRjIDEgLy8gMAoJaXR4bl9maWVsZCBBc3NldEFtb3VudAoKCS8vIGNvbnRyYWN0c1xBZ3Jvc2hvcC5hbGdvLnRzOjM0CgkvLyBhc3NldFJlY2VpdmVyOiB0aGlzLmFwcC5hZGRyZXNzCglnbG9iYWwgQ3VycmVudEFwcGxpY2F0aW9uQWRkcmVzcwoJaXR4bl9maWVsZCBBc3NldFJlY2VpdmVyCgoJLy8gRmVlIGZpZWxkIG5vdCBzZXQsIGRlZmF1bHRpbmcgdG8gMAoJaW50YyAxIC8vIDAKCWl0eG5fZmllbGQgRmVlCgoJLy8gU3VibWl0IGlubmVyIHRyYW5zYWN0aW9uCglpdHhuX3N1Ym1pdAoJcmV0c3ViCgovLyBsaXN0aW5nRGVwb3NpdChwYXksYXhmZXIsdWludDY0LHVpbnQ2NCl2b2lkCiphYmlfcm91dGVfbGlzdGluZ0RlcG9zaXQ6CgkvLyB1bml0YXJ5UHJpY2U6IHVpbnQ2NAoJdHhuYSBBcHBsaWNhdGlvbkFyZ3MgMgoJYnRvaQoKCS8vIG5vbmNlOiB1aW50NjQKCXR4bmEgQXBwbGljYXRpb25BcmdzIDEKCWJ0b2kKCgkvLyB4ZmVyOiBheGZlcgoJdHhuIEdyb3VwSW5kZXgKCWludGMgMCAvLyAxCgktCglkdXAKCWd0eG5zIFR5cGVFbnVtCglpbnRjIDMgLy8gIGF4ZmVyCgk9PQoKCS8vIGFyZ3VtZW50IDIgKHhmZXIpIGZvciBsaXN0aW5nRGVwb3NpdCBtdXN0IGJlIGEgYXhmZXIgdHJhbnNhY3Rpb24KCWFzc2VydAoKCS8vIG1iclBheTogcGF5Cgl0eG4gR3JvdXBJbmRleAoJcHVzaGludCAyCgktCglkdXAKCWd0eG5zIFR5cGVFbnVtCglpbnRjIDAgLy8gIHBheQoJPT0KCgkvLyBhcmd1bWVudCAzIChtYnJQYXkpIGZvciBsaXN0aW5nRGVwb3NpdCBtdXN0IGJlIGEgcGF5IHRyYW5zYWN0aW9uCglhc3NlcnQKCgkvLyBleGVjdXRlIGxpc3RpbmdEZXBvc2l0KHBheSxheGZlcix1aW50NjQsdWludDY0KXZvaWQKCWNhbGxzdWIgbGlzdGluZ0RlcG9zaXQKCWludGMgMCAvLyAxCglyZXR1cm4KCi8vIGxpc3RpbmdEZXBvc2l0KG1iclBheTogUGF5VHhuLCB4ZmVyOiBBc3NldFRyYW5zZmVyVHhuLCBub25jZTogdWludDY0LCB1bml0YXJ5UHJpY2U6IHVpbnQ2NCk6IHZvaWQKbGlzdGluZ0RlcG9zaXQ6Cglwcm90byA0IDAKCgkvLyBjb250cmFjdHNcQWdyb3Nob3AuYWxnby50czozOQoJLy8gYXNzZXJ0KCF0aGlzLmxpc3RpbmdzKHsgb3duZXI6IHRoaXMudHhuLnNlbmRlciwgYXNzZXQ6IHhmZXIueGZlckFzc2V0LCBub25jZTogbm9uY2UgfSkuZXhpc3RzKQoJdHhuIFNlbmRlcgoJZnJhbWVfZGlnIC0yIC8vIHhmZXI6IEFzc2V0VHJhbnNmZXJUeG4KCWd0eG5zIFhmZXJBc3NldAoJaXRvYgoJY29uY2F0CglmcmFtZV9kaWcgLTMgLy8gbm9uY2U6IHVpbnQ2NAoJaXRvYgoJY29uY2F0Cglib3hfbGVuCglzd2FwCglwb3AKCSEKCWFzc2VydAoKCS8vIGNvbnRyYWN0c1xBZ3Jvc2hvcC5hbGdvLnRzOjQxCgkvLyB2ZXJpZnlQYXlUeG4obWJyUGF5LCB7CgkvLyAgICAgICBzZW5kZXI6IHRoaXMudHhuLnNlbmRlciwKCS8vICAgICAgIHJlY2VpdmVyOiB0aGlzLmFwcC5hZGRyZXNzLAoJLy8gICAgICAgYW1vdW50OiBmb3JTYWxlTWJyLAoJLy8gICAgIH0pCgkvLyB2ZXJpZnkgc2VuZGVyCglmcmFtZV9kaWcgLTEgLy8gbWJyUGF5OiBQYXlUeG4KCWd0eG5zIFNlbmRlcgoJdHhuIFNlbmRlcgoJPT0KCgkvLyB0cmFuc2FjdGlvbiB2ZXJpZmljYXRpb24gZmFpbGVkOiB7InR4biI6Im1iclBheSIsImZpZWxkIjoic2VuZGVyIiwiZXhwZWN0ZWQiOiJ0aGlzLnR4bi5zZW5kZXIifQoJYXNzZXJ0CgoJLy8gdmVyaWZ5IHJlY2VpdmVyCglmcmFtZV9kaWcgLTEgLy8gbWJyUGF5OiBQYXlUeG4KCWd0eG5zIFJlY2VpdmVyCglnbG9iYWwgQ3VycmVudEFwcGxpY2F0aW9uQWRkcmVzcwoJPT0KCgkvLyB0cmFuc2FjdGlvbiB2ZXJpZmljYXRpb24gZmFpbGVkOiB7InR4biI6Im1iclBheSIsImZpZWxkIjoicmVjZWl2ZXIiLCJleHBlY3RlZCI6InRoaXMuYXBwLmFkZHJlc3MifQoJYXNzZXJ0CgoJLy8gdmVyaWZ5IGFtb3VudAoJZnJhbWVfZGlnIC0xIC8vIG1iclBheTogUGF5VHhuCglndHhucyBBbW91bnQKCWludGMgNCAvLyA0NzMwMAoJPT0KCgkvLyB0cmFuc2FjdGlvbiB2ZXJpZmljYXRpb24gZmFpbGVkOiB7InR4biI6Im1iclBheSIsImZpZWxkIjoiYW1vdW50IiwiZXhwZWN0ZWQiOiJmb3JTYWxlTWJyIn0KCWFzc2VydAoKCS8vIGNvbnRyYWN0c1xBZ3Jvc2hvcC5hbGdvLnRzOjQ3CgkvLyB2ZXJpZnlBc3NldFRyYW5zZmVyVHhuKHhmZXIsIHsKCS8vICAgICAgIHNlbmRlcjogdGhpcy50eG4uc2VuZGVyLAoJLy8gICAgICAgYXNzZXRSZWNlaXZlcjogdGhpcy5hcHAuYWRkcmVzcywKCS8vICAgICAgIGFzc2V0QW1vdW50OiB7IGdyZWF0ZXJUaGFuOiAwIH0sCgkvLyAgICAgfSkKCS8vIHZlcmlmeSBzZW5kZXIKCWZyYW1lX2RpZyAtMiAvLyB4ZmVyOiBBc3NldFRyYW5zZmVyVHhuCglndHhucyBTZW5kZXIKCXR4biBTZW5kZXIKCT09CgoJLy8gdHJhbnNhY3Rpb24gdmVyaWZpY2F0aW9uIGZhaWxlZDogeyJ0eG4iOiJ4ZmVyIiwiZmllbGQiOiJzZW5kZXIiLCJleHBlY3RlZCI6InRoaXMudHhuLnNlbmRlciJ9Cglhc3NlcnQKCgkvLyB2ZXJpZnkgYXNzZXRSZWNlaXZlcgoJZnJhbWVfZGlnIC0yIC8vIHhmZXI6IEFzc2V0VHJhbnNmZXJUeG4KCWd0eG5zIEFzc2V0UmVjZWl2ZXIKCWdsb2JhbCBDdXJyZW50QXBwbGljYXRpb25BZGRyZXNzCgk9PQoKCS8vIHRyYW5zYWN0aW9uIHZlcmlmaWNhdGlvbiBmYWlsZWQ6IHsidHhuIjoieGZlciIsImZpZWxkIjoiYXNzZXRSZWNlaXZlciIsImV4cGVjdGVkIjoidGhpcy5hcHAuYWRkcmVzcyJ9Cglhc3NlcnQKCgkvLyB2ZXJpZnkgYXNzZXRBbW91bnQKCWZyYW1lX2RpZyAtMiAvLyB4ZmVyOiBBc3NldFRyYW5zZmVyVHhuCglndHhucyBBc3NldEFtb3VudAoJaW50YyAxIC8vIDAKCT4KCgkvLyB0cmFuc2FjdGlvbiB2ZXJpZmljYXRpb24gZmFpbGVkOiB7InR4biI6InhmZXIiLCJmaWVsZCI6ImFzc2V0QW1vdW50IiwiY29uZGl0aW9uIjoiZ3JlYXRlclRoYW4iLCJleHBlY3RlZCI6Ij4wIn0KCWFzc2VydAoKCS8vIGNvbnRyYWN0c1xBZ3Jvc2hvcC5hbGdvLnRzOjUzCgkvLyB0aGlzLmxpc3RpbmdzKHsgb3duZXI6IHRoaXMudHhuLnNlbmRlciwgYXNzZXQ6IHhmZXIueGZlckFzc2V0LCBub25jZTogbm9uY2UgfSkudmFsdWUgPSB7CgkvLyAgICAgICBkZXBvc2l0ZWQ6IHhmZXIuYXNzZXRBbW91bnQsCgkvLyAgICAgICB1bml0YXJ5UHJpY2U6IHVuaXRhcnlQcmljZSwKCS8vICAgICB9Cgl0eG4gU2VuZGVyCglmcmFtZV9kaWcgLTIgLy8geGZlcjogQXNzZXRUcmFuc2ZlclR4bgoJZ3R4bnMgWGZlckFzc2V0CglpdG9iCgljb25jYXQKCWZyYW1lX2RpZyAtMyAvLyBub25jZTogdWludDY0CglpdG9iCgljb25jYXQKCWZyYW1lX2RpZyAtMiAvLyB4ZmVyOiBBc3NldFRyYW5zZmVyVHhuCglndHhucyBBc3NldEFtb3VudAoJaXRvYgoJZnJhbWVfZGlnIC00IC8vIHVuaXRhcnlQcmljZTogdWludDY0CglpdG9iCgljb25jYXQKCWJveF9wdXQKCXJldHN1YgoKLy8gZGVwb3NpdChheGZlcix1aW50NjQpdm9pZAoqYWJpX3JvdXRlX2RlcG9zaXQ6CgkvLyBub25jZTogdWludDY0Cgl0eG5hIEFwcGxpY2F0aW9uQXJncyAxCglidG9pCgoJLy8geGZlcjogYXhmZXIKCXR4biBHcm91cEluZGV4CglpbnRjIDAgLy8gMQoJLQoJZHVwCglndHhucyBUeXBlRW51bQoJaW50YyAzIC8vICBheGZlcgoJPT0KCgkvLyBhcmd1bWVudCAxICh4ZmVyKSBmb3IgZGVwb3NpdCBtdXN0IGJlIGEgYXhmZXIgdHJhbnNhY3Rpb24KCWFzc2VydAoKCS8vIGV4ZWN1dGUgZGVwb3NpdChheGZlcix1aW50NjQpdm9pZAoJY2FsbHN1YiBkZXBvc2l0CglpbnRjIDAgLy8gMQoJcmV0dXJuCgovLyBkZXBvc2l0KHhmZXI6IEFzc2V0VHJhbnNmZXJUeG4sIG5vbmNlOiB1aW50NjQpOiB2b2lkCmRlcG9zaXQ6Cglwcm90byAyIDAKCgkvLyBQdXNoIGVtcHR5IGJ5dGVzIGFmdGVyIHRoZSBmcmFtZSBwb2ludGVyIHRvIHJlc2VydmUgc3BhY2UgZm9yIGxvY2FsIHZhcmlhYmxlcwoJYnl0ZWMgMCAvLyAweAoJZHVwCgoJLy8gY29udHJhY3RzXEFncm9zaG9wLmFsZ28udHM6NjAKCS8vIGFzc2VydCh0aGlzLmxpc3RpbmdzKHsgb3duZXI6IHRoaXMudHhuLnNlbmRlciwgYXNzZXQ6IHhmZXIueGZlckFzc2V0LCBub25jZTogbm9uY2UgfSkuZXhpc3RzKQoJdHhuIFNlbmRlcgoJZnJhbWVfZGlnIC0xIC8vIHhmZXI6IEFzc2V0VHJhbnNmZXJUeG4KCWd0eG5zIFhmZXJBc3NldAoJaXRvYgoJY29uY2F0CglmcmFtZV9kaWcgLTIgLy8gbm9uY2U6IHVpbnQ2NAoJaXRvYgoJY29uY2F0Cglib3hfbGVuCglzd2FwCglwb3AKCWFzc2VydAoKCS8vIGNvbnRyYWN0c1xBZ3Jvc2hvcC5hbGdvLnRzOjYyCgkvLyB2ZXJpZnlBc3NldFRyYW5zZmVyVHhuKHhmZXIsIHsKCS8vICAgICAgIHNlbmRlcjogdGhpcy50eG4uc2VuZGVyLAoJLy8gICAgICAgYXNzZXRSZWNlaXZlcjogdGhpcy5hcHAuYWRkcmVzcywKCS8vICAgICAgIGFzc2V0QW1vdW50OiB7IGdyZWF0ZXJUaGFuOiAwIH0sCgkvLyAgICAgfSkKCS8vIHZlcmlmeSBzZW5kZXIKCWZyYW1lX2RpZyAtMSAvLyB4ZmVyOiBBc3NldFRyYW5zZmVyVHhuCglndHhucyBTZW5kZXIKCXR4biBTZW5kZXIKCT09CgoJLy8gdHJhbnNhY3Rpb24gdmVyaWZpY2F0aW9uIGZhaWxlZDogeyJ0eG4iOiJ4ZmVyIiwiZmllbGQiOiJzZW5kZXIiLCJleHBlY3RlZCI6InRoaXMudHhuLnNlbmRlciJ9Cglhc3NlcnQKCgkvLyB2ZXJpZnkgYXNzZXRSZWNlaXZlcgoJZnJhbWVfZGlnIC0xIC8vIHhmZXI6IEFzc2V0VHJhbnNmZXJUeG4KCWd0eG5zIEFzc2V0UmVjZWl2ZXIKCWdsb2JhbCBDdXJyZW50QXBwbGljYXRpb25BZGRyZXNzCgk9PQoKCS8vIHRyYW5zYWN0aW9uIHZlcmlmaWNhdGlvbiBmYWlsZWQ6IHsidHhuIjoieGZlciIsImZpZWxkIjoiYXNzZXRSZWNlaXZlciIsImV4cGVjdGVkIjoidGhpcy5hcHAuYWRkcmVzcyJ9Cglhc3NlcnQKCgkvLyB2ZXJpZnkgYXNzZXRBbW91bnQKCWZyYW1lX2RpZyAtMSAvLyB4ZmVyOiBBc3NldFRyYW5zZmVyVHhuCglndHhucyBBc3NldEFtb3VudAoJaW50YyAxIC8vIDAKCT4KCgkvLyB0cmFuc2FjdGlvbiB2ZXJpZmljYXRpb24gZmFpbGVkOiB7InR4biI6InhmZXIiLCJmaWVsZCI6ImFzc2V0QW1vdW50IiwiY29uZGl0aW9uIjoiZ3JlYXRlclRoYW4iLCJleHBlY3RlZCI6Ij4wIn0KCWFzc2VydAoKCS8vIGNvbnRyYWN0c1xBZ3Jvc2hvcC5hbGdvLnRzOjY4CgkvLyBjdXJyZW50RGVwb3NpdGVkID0gdGhpcy5saXN0aW5ncyh7IG93bmVyOiB0aGlzLnR4bi5zZW5kZXIsIGFzc2V0OiB4ZmVyLnhmZXJBc3NldCwgbm9uY2U6IG5vbmNlIH0pLnZhbHVlCgkvLyAgICAgICAuZGVwb3NpdGVkCglpbnRjIDEgLy8gMAoJaW50YyAyIC8vIDgKCXR4biBTZW5kZXIKCWZyYW1lX2RpZyAtMSAvLyB4ZmVyOiBBc3NldFRyYW5zZmVyVHhuCglndHhucyBYZmVyQXNzZXQKCWl0b2IKCWNvbmNhdAoJZnJhbWVfZGlnIC0yIC8vIG5vbmNlOiB1aW50NjQKCWl0b2IKCWNvbmNhdAoJY292ZXIgMgoJYm94X2V4dHJhY3QKCWJ0b2kKCWZyYW1lX2J1cnkgMCAvLyBjdXJyZW50RGVwb3NpdGVkOiB1aW50NjQKCgkvLyBjb250cmFjdHNcQWdyb3Nob3AuYWxnby50czo3MAoJLy8gY3VycmVudFVuaXRhcnlQcmljZSA9IHRoaXMubGlzdGluZ3MoeyBvd25lcjogdGhpcy50eG4uc2VuZGVyLCBhc3NldDogeGZlci54ZmVyQXNzZXQsIG5vbmNlOiBub25jZSB9KS52YWx1ZQoJLy8gICAgICAgLnVuaXRhcnlQcmljZQoJaW50YyAyIC8vICBoZWFkT2Zmc2V0CglpbnRjIDIgLy8gOAoJdHhuIFNlbmRlcgoJZnJhbWVfZGlnIC0xIC8vIHhmZXI6IEFzc2V0VHJhbnNmZXJUeG4KCWd0eG5zIFhmZXJBc3NldAoJaXRvYgoJY29uY2F0CglmcmFtZV9kaWcgLTIgLy8gbm9uY2U6IHVpbnQ2NAoJaXRvYgoJY29uY2F0Cgljb3ZlciAyCglib3hfZXh0cmFjdAoJYnRvaQoJZnJhbWVfYnVyeSAxIC8vIGN1cnJlbnRVbml0YXJ5UHJpY2U6IHVpbnQ2NAoKCS8vIGNvbnRyYWN0c1xBZ3Jvc2hvcC5hbGdvLnRzOjc0CgkvLyB0aGlzLmxpc3RpbmdzKHsgb3duZXI6IHRoaXMudHhuLnNlbmRlciwgYXNzZXQ6IHhmZXIueGZlckFzc2V0LCBub25jZTogbm9uY2UgfSkudmFsdWUgPSB7CgkvLyAgICAgICBkZXBvc2l0ZWQ6IGN1cnJlbnREZXBvc2l0ZWQgKyB4ZmVyLmFzc2V0QW1vdW50LAoJLy8gICAgICAgdW5pdGFyeVByaWNlOiBjdXJyZW50VW5pdGFyeVByaWNlLAoJLy8gICAgIH0KCXR4biBTZW5kZXIKCWZyYW1lX2RpZyAtMSAvLyB4ZmVyOiBBc3NldFRyYW5zZmVyVHhuCglndHhucyBYZmVyQXNzZXQKCWl0b2IKCWNvbmNhdAoJZnJhbWVfZGlnIC0yIC8vIG5vbmNlOiB1aW50NjQKCWl0b2IKCWNvbmNhdAoJZnJhbWVfZGlnIDAgLy8gY3VycmVudERlcG9zaXRlZDogdWludDY0CglmcmFtZV9kaWcgLTEgLy8geGZlcjogQXNzZXRUcmFuc2ZlclR4bgoJZ3R4bnMgQXNzZXRBbW91bnQKCSsKCWl0b2IKCWZyYW1lX2RpZyAxIC8vIGN1cnJlbnRVbml0YXJ5UHJpY2U6IHVpbnQ2NAoJaXRvYgoJY29uY2F0Cglib3hfcHV0CglyZXRzdWIKCi8vIHNldFByaWNlKHVpbnQ2NCx1aW50NjQsdWludDY0KXZvaWQKKmFiaV9yb3V0ZV9zZXRQcmljZToKCS8vIHVuaXRhcnlQcmljZTogdWludDY0Cgl0eG5hIEFwcGxpY2F0aW9uQXJncyAzCglidG9pCgoJLy8gbm9uY2U6IHVpbnQ2NAoJdHhuYSBBcHBsaWNhdGlvbkFyZ3MgMgoJYnRvaQoKCS8vIGFzc2V0OiB1aW50NjQKCXR4bmEgQXBwbGljYXRpb25BcmdzIDEKCWJ0b2kKCgkvLyBleGVjdXRlIHNldFByaWNlKHVpbnQ2NCx1aW50NjQsdWludDY0KXZvaWQKCWNhbGxzdWIgc2V0UHJpY2UKCWludGMgMCAvLyAxCglyZXR1cm4KCi8vIHNldFByaWNlKGFzc2V0OiBBc3NldElELCBub25jZTogdWludDY0LCB1bml0YXJ5UHJpY2U6IHVpbnQ2NCk6IHZvaWQKc2V0UHJpY2U6Cglwcm90byAzIDAKCgkvLyBQdXNoIGVtcHR5IGJ5dGVzIGFmdGVyIHRoZSBmcmFtZSBwb2ludGVyIHRvIHJlc2VydmUgc3BhY2UgZm9yIGxvY2FsIHZhcmlhYmxlcwoJYnl0ZWMgMCAvLyAweAoKCS8vIGNvbnRyYWN0c1xBZ3Jvc2hvcC5hbGdvLnRzOjgxCgkvLyBjdXJyZW50RGVwb3NpdGVkID0gdGhpcy5saXN0aW5ncyh7IG93bmVyOiB0aGlzLnR4bi5zZW5kZXIsIGFzc2V0OiBhc3NldCwgbm9uY2U6IG5vbmNlIH0pLnZhbHVlLmRlcG9zaXRlZAoJaW50YyAxIC8vIDAKCWludGMgMiAvLyA4Cgl0eG4gU2VuZGVyCglmcmFtZV9kaWcgLTEgLy8gYXNzZXQ6IEFzc2V0SUQKCWl0b2IKCWNvbmNhdAoJZnJhbWVfZGlnIC0yIC8vIG5vbmNlOiB1aW50NjQKCWl0b2IKCWNvbmNhdAoJY292ZXIgMgoJYm94X2V4dHJhY3QKCWJ0b2kKCWZyYW1lX2J1cnkgMCAvLyBjdXJyZW50RGVwb3NpdGVkOiB1aW50NjQKCgkvLyBjb250cmFjdHNcQWdyb3Nob3AuYWxnby50czo4MwoJLy8gdGhpcy5saXN0aW5ncyh7IG93bmVyOiB0aGlzLnR4bi5zZW5kZXIsIGFzc2V0OiBhc3NldCwgbm9uY2U6IG5vbmNlIH0pLnZhbHVlID0gewoJLy8gICAgICAgZGVwb3NpdGVkOiBjdXJyZW50RGVwb3NpdGVkLAoJLy8gICAgICAgdW5pdGFyeVByaWNlOiB1bml0YXJ5UHJpY2UsCgkvLyAgICAgfQoJdHhuIFNlbmRlcgoJZnJhbWVfZGlnIC0xIC8vIGFzc2V0OiBBc3NldElECglpdG9iCgljb25jYXQKCWZyYW1lX2RpZyAtMiAvLyBub25jZTogdWludDY0CglpdG9iCgljb25jYXQKCWZyYW1lX2RpZyAwIC8vIGN1cnJlbnREZXBvc2l0ZWQ6IHVpbnQ2NAoJaXRvYgoJZnJhbWVfZGlnIC0zIC8vIHVuaXRhcnlQcmljZTogdWludDY0CglpdG9iCgljb25jYXQKCWJveF9wdXQKCXJldHN1YgoKLy8gYnV5KGFkZHJlc3MsdWludDY0LHVpbnQ2NCxwYXksdWludDY0KXZvaWQKKmFiaV9yb3V0ZV9idXk6CgkvLyBxdWFudGl0eTogdWludDY0Cgl0eG5hIEFwcGxpY2F0aW9uQXJncyA0CglidG9pCgoJLy8gYnV5UGF5OiBwYXkKCXR4biBHcm91cEluZGV4CglpbnRjIDAgLy8gMQoJLQoJZHVwCglndHhucyBUeXBlRW51bQoJaW50YyAwIC8vICBwYXkKCT09CgoJLy8gYXJndW1lbnQgMSAoYnV5UGF5KSBmb3IgYnV5IG11c3QgYmUgYSBwYXkgdHJhbnNhY3Rpb24KCWFzc2VydAoKCS8vIG5vbmNlOiB1aW50NjQKCXR4bmEgQXBwbGljYXRpb25BcmdzIDMKCWJ0b2kKCgkvLyBhc3NldDogdWludDY0Cgl0eG5hIEFwcGxpY2F0aW9uQXJncyAyCglidG9pCgoJLy8gb3duZXI6IGFkZHJlc3MKCXR4bmEgQXBwbGljYXRpb25BcmdzIDEKCWR1cAoJbGVuCglwdXNoaW50IDMyCgk9PQoKCS8vIGFyZ3VtZW50IDQgKG93bmVyKSBmb3IgYnV5IG11c3QgYmUgYSBhZGRyZXNzCglhc3NlcnQKCgkvLyBleGVjdXRlIGJ1eShhZGRyZXNzLHVpbnQ2NCx1aW50NjQscGF5LHVpbnQ2NCl2b2lkCgljYWxsc3ViIGJ1eQoJaW50YyAwIC8vIDEKCXJldHVybgoKLy8gYnV5KG93bmVyOiBBZGRyZXNzLCBhc3NldDogQXNzZXRJRCwgbm9uY2U6IHVpbnQ2NCwgYnV5UGF5OiBQYXlUeG4sIHF1YW50aXR5OiB1aW50NjQpOiB2b2lkCmJ1eToKCXByb3RvIDUgMAoKCS8vIFB1c2ggZW1wdHkgYnl0ZXMgYWZ0ZXIgdGhlIGZyYW1lIHBvaW50ZXIgdG8gcmVzZXJ2ZSBzcGFjZSBmb3IgbG9jYWwgdmFyaWFibGVzCglieXRlYyAwIC8vIDB4CglkdXBuIDIKCgkvLyBjb250cmFjdHNcQWdyb3Nob3AuYWxnby50czo5MAoJLy8gY3VycmVudERlcG9zaXRlZCA9IHRoaXMubGlzdGluZ3MoeyBvd25lcjogb3duZXIsIGFzc2V0OiBhc3NldCwgbm9uY2U6IG5vbmNlIH0pLnZhbHVlLmRlcG9zaXRlZAoJaW50YyAxIC8vIDAKCWludGMgMiAvLyA4CglmcmFtZV9kaWcgLTEgLy8gb3duZXI6IEFkZHJlc3MKCWZyYW1lX2RpZyAtMiAvLyBhc3NldDogQXNzZXRJRAoJaXRvYgoJY29uY2F0CglmcmFtZV9kaWcgLTMgLy8gbm9uY2U6IHVpbnQ2NAoJaXRvYgoJY29uY2F0Cgljb3ZlciAyCglib3hfZXh0cmFjdAoJYnRvaQoJZnJhbWVfYnVyeSAwIC8vIGN1cnJlbnREZXBvc2l0ZWQ6IHVpbnQ2NAoKCS8vIGNvbnRyYWN0c1xBZ3Jvc2hvcC5hbGdvLnRzOjkxCgkvLyBjdXJyZW50VW5pdGFyeVByaWNlID0gdGhpcy5saXN0aW5ncyh7IG93bmVyOiBvd25lciwgYXNzZXQ6IGFzc2V0LCBub25jZTogbm9uY2UgfSkudmFsdWUudW5pdGFyeVByaWNlCglpbnRjIDIgLy8gIGhlYWRPZmZzZXQKCWludGMgMiAvLyA4CglmcmFtZV9kaWcgLTEgLy8gb3duZXI6IEFkZHJlc3MKCWZyYW1lX2RpZyAtMiAvLyBhc3NldDogQXNzZXRJRAoJaXRvYgoJY29uY2F0CglmcmFtZV9kaWcgLTMgLy8gbm9uY2U6IHVpbnQ2NAoJaXRvYgoJY29uY2F0Cgljb3ZlciAyCglib3hfZXh0cmFjdAoJYnRvaQoJZnJhbWVfYnVyeSAxIC8vIGN1cnJlbnRVbml0YXJ5UHJpY2U6IHVpbnQ2NAoKCS8vIGNvbnRyYWN0c1xBZ3Jvc2hvcC5hbGdvLnRzOjkzCgkvLyBhbW91bnRUb0JlUGFpZCA9IGN1cnJlbnRVbml0YXJ5UHJpY2UgKiBxdWFudGl0eQoJZnJhbWVfZGlnIDEgLy8gY3VycmVudFVuaXRhcnlQcmljZTogdWludDY0CglmcmFtZV9kaWcgLTUgLy8gcXVhbnRpdHk6IHVpbnQ2NAoJKgoJZnJhbWVfYnVyeSAyIC8vIGFtb3VudFRvQmVQYWlkOiB1aW50NjQKCgkvLyBjb250cmFjdHNcQWdyb3Nob3AuYWxnby50czo5NQoJLy8gdmVyaWZ5UGF5VHhuKGJ1eVBheSwgewoJLy8gICAgICAgc2VuZGVyOiB0aGlzLnR4bi5zZW5kZXIsCgkvLyAgICAgICByZWNlaXZlcjogb3duZXIsCgkvLyAgICAgfSkKCS8vIHZlcmlmeSBzZW5kZXIKCWZyYW1lX2RpZyAtNCAvLyBidXlQYXk6IFBheVR4bgoJZ3R4bnMgU2VuZGVyCgl0eG4gU2VuZGVyCgk9PQoKCS8vIHRyYW5zYWN0aW9uIHZlcmlmaWNhdGlvbiBmYWlsZWQ6IHsidHhuIjoiYnV5UGF5IiwiZmllbGQiOiJzZW5kZXIiLCJleHBlY3RlZCI6InRoaXMudHhuLnNlbmRlciJ9Cglhc3NlcnQKCgkvLyB2ZXJpZnkgcmVjZWl2ZXIKCWZyYW1lX2RpZyAtNCAvLyBidXlQYXk6IFBheVR4bgoJZ3R4bnMgUmVjZWl2ZXIKCWZyYW1lX2RpZyAtMSAvLyBvd25lcjogQWRkcmVzcwoJPT0KCgkvLyB0cmFuc2FjdGlvbiB2ZXJpZmljYXRpb24gZmFpbGVkOiB7InR4biI6ImJ1eVBheSIsImZpZWxkIjoicmVjZWl2ZXIiLCJleHBlY3RlZCI6Im93bmVyIn0KCWFzc2VydAoKCS8vIGNvbnRyYWN0c1xBZ3Jvc2hvcC5hbGdvLnRzOjk5CgkvLyBzZW5kQXNzZXRUcmFuc2Zlcih7CgkvLyAgICAgICB4ZmVyQXNzZXQ6IGFzc2V0LAoJLy8gICAgICAgYXNzZXRSZWNlaXZlcjogdGhpcy50eG4uc2VuZGVyLAoJLy8gICAgICAgYXNzZXRBbW91bnQ6IHF1YW50aXR5LAoJLy8gICAgIH0pCglpdHhuX2JlZ2luCglpbnRjIDMgLy8gIGF4ZmVyCglpdHhuX2ZpZWxkIFR5cGVFbnVtCgoJLy8gY29udHJhY3RzXEFncm9zaG9wLmFsZ28udHM6MTAwCgkvLyB4ZmVyQXNzZXQ6IGFzc2V0CglmcmFtZV9kaWcgLTIgLy8gYXNzZXQ6IEFzc2V0SUQKCWl0eG5fZmllbGQgWGZlckFzc2V0CgoJLy8gY29udHJhY3RzXEFncm9zaG9wLmFsZ28udHM6MTAxCgkvLyBhc3NldFJlY2VpdmVyOiB0aGlzLnR4bi5zZW5kZXIKCXR4biBTZW5kZXIKCWl0eG5fZmllbGQgQXNzZXRSZWNlaXZlcgoKCS8vIGNvbnRyYWN0c1xBZ3Jvc2hvcC5hbGdvLnRzOjEwMgoJLy8gYXNzZXRBbW91bnQ6IHF1YW50aXR5CglmcmFtZV9kaWcgLTUgLy8gcXVhbnRpdHk6IHVpbnQ2NAoJaXR4bl9maWVsZCBBc3NldEFtb3VudAoKCS8vIEZlZSBmaWVsZCBub3Qgc2V0LCBkZWZhdWx0aW5nIHRvIDAKCWludGMgMSAvLyAwCglpdHhuX2ZpZWxkIEZlZQoKCS8vIFN1Ym1pdCBpbm5lciB0cmFuc2FjdGlvbgoJaXR4bl9zdWJtaXQKCgkvLyBjb250cmFjdHNcQWdyb3Nob3AuYWxnby50czoxMDUKCS8vIHRoaXMubGlzdGluZ3MoeyBvd25lcjogb3duZXIsIGFzc2V0OiBhc3NldCwgbm9uY2U6IG5vbmNlIH0pLnZhbHVlID0gewoJLy8gICAgICAgZGVwb3NpdGVkOiBjdXJyZW50RGVwb3NpdGVkIC0gcXVhbnRpdHksCgkvLyAgICAgICB1bml0YXJ5UHJpY2U6IGN1cnJlbnRVbml0YXJ5UHJpY2UsCgkvLyAgICAgfQoJZnJhbWVfZGlnIC0xIC8vIG93bmVyOiBBZGRyZXNzCglmcmFtZV9kaWcgLTIgLy8gYXNzZXQ6IEFzc2V0SUQKCWl0b2IKCWNvbmNhdAoJZnJhbWVfZGlnIC0zIC8vIG5vbmNlOiB1aW50NjQKCWl0b2IKCWNvbmNhdAoJZnJhbWVfZGlnIDAgLy8gY3VycmVudERlcG9zaXRlZDogdWludDY0CglmcmFtZV9kaWcgLTUgLy8gcXVhbnRpdHk6IHVpbnQ2NAoJLQoJaXRvYgoJZnJhbWVfZGlnIDEgLy8gY3VycmVudFVuaXRhcnlQcmljZTogdWludDY0CglpdG9iCgljb25jYXQKCWJveF9wdXQKCXJldHN1YgoKLy8gd2l0aGRyYXcodWludDY0LHVpbnQ2NCl2b2lkCiphYmlfcm91dGVfd2l0aGRyYXc6CgkvLyBub25jZTogdWludDY0Cgl0eG5hIEFwcGxpY2F0aW9uQXJncyAyCglidG9pCgoJLy8gYXNzZXQ6IHVpbnQ2NAoJdHhuYSBBcHBsaWNhdGlvbkFyZ3MgMQoJYnRvaQoKCS8vIGV4ZWN1dGUgd2l0aGRyYXcodWludDY0LHVpbnQ2NCl2b2lkCgljYWxsc3ViIHdpdGhkcmF3CglpbnRjIDAgLy8gMQoJcmV0dXJuCgovLyB3aXRoZHJhdyhhc3NldDogQXNzZXRJRCwgbm9uY2U6IHVpbnQ2NCk6IHZvaWQKd2l0aGRyYXc6Cglwcm90byAyIDAKCgkvLyBQdXNoIGVtcHR5IGJ5dGVzIGFmdGVyIHRoZSBmcmFtZSBwb2ludGVyIHRvIHJlc2VydmUgc3BhY2UgZm9yIGxvY2FsIHZhcmlhYmxlcwoJYnl0ZWMgMCAvLyAweAoKCS8vIGNvbnRyYWN0c1xBZ3Jvc2hvcC5hbGdvLnRzOjExMgoJLy8gY3VycmVudERlcG9zaXRlZCA9IHRoaXMubGlzdGluZ3MoeyBvd25lcjogdGhpcy50eG4uc2VuZGVyLCBhc3NldDogYXNzZXQsIG5vbmNlOiBub25jZSB9KS52YWx1ZS5kZXBvc2l0ZWQKCWludGMgMSAvLyAwCglpbnRjIDIgLy8gOAoJdHhuIFNlbmRlcgoJZnJhbWVfZGlnIC0xIC8vIGFzc2V0OiBBc3NldElECglpdG9iCgljb25jYXQKCWZyYW1lX2RpZyAtMiAvLyBub25jZTogdWludDY0CglpdG9iCgljb25jYXQKCWNvdmVyIDIKCWJveF9leHRyYWN0CglidG9pCglmcmFtZV9idXJ5IDAgLy8gY3VycmVudERlcG9zaXRlZDogdWludDY0CgoJLy8gY29udHJhY3RzXEFncm9zaG9wLmFsZ28udHM6MTE0CgkvLyB0aGlzLmxpc3RpbmdzKHsgb3duZXI6IHRoaXMudHhuLnNlbmRlciwgYXNzZXQ6IGFzc2V0LCBub25jZTogbm9uY2UgfSkuZGVsZXRlKCkKCXR4biBTZW5kZXIKCWZyYW1lX2RpZyAtMSAvLyBhc3NldDogQXNzZXRJRAoJaXRvYgoJY29uY2F0CglmcmFtZV9kaWcgLTIgLy8gbm9uY2U6IHVpbnQ2NAoJaXRvYgoJY29uY2F0Cglib3hfZGVsCgoJLy8gY29udHJhY3RzXEFncm9zaG9wLmFsZ28udHM6MTE2CgkvLyBzZW5kUGF5bWVudCh7CgkvLyAgICAgICByZWNlaXZlcjogdGhpcy50eG4uc2VuZGVyLAoJLy8gICAgICAgYW1vdW50OiBmb3JTYWxlTWJyLAoJLy8gICAgIH0pCglpdHhuX2JlZ2luCglpbnRjIDAgLy8gIHBheQoJaXR4bl9maWVsZCBUeXBlRW51bQoKCS8vIGNvbnRyYWN0c1xBZ3Jvc2hvcC5hbGdvLnRzOjExNwoJLy8gcmVjZWl2ZXI6IHRoaXMudHhuLnNlbmRlcgoJdHhuIFNlbmRlcgoJaXR4bl9maWVsZCBSZWNlaXZlcgoKCS8vIGNvbnRyYWN0c1xBZ3Jvc2hvcC5hbGdvLnRzOjExOAoJLy8gYW1vdW50OiBmb3JTYWxlTWJyCglpbnRjIDQgLy8gNDczMDAKCWl0eG5fZmllbGQgQW1vdW50CgoJLy8gRmVlIGZpZWxkIG5vdCBzZXQsIGRlZmF1bHRpbmcgdG8gMAoJaW50YyAxIC8vIDAKCWl0eG5fZmllbGQgRmVlCgoJLy8gU3VibWl0IGlubmVyIHRyYW5zYWN0aW9uCglpdHhuX3N1Ym1pdAoKCS8vIGNvbnRyYWN0c1xBZ3Jvc2hvcC5hbGdvLnRzOjEyMQoJLy8gc2VuZEFzc2V0VHJhbnNmZXIoewoJLy8gICAgICAgeGZlckFzc2V0OiBhc3NldCwKCS8vICAgICAgIGFzc2V0UmVjZWl2ZXI6IHRoaXMudHhuLnNlbmRlciwKCS8vICAgICAgIGFzc2V0QW1vdW50OiBjdXJyZW50RGVwb3NpdGVkLAoJLy8gICAgIH0pCglpdHhuX2JlZ2luCglpbnRjIDMgLy8gIGF4ZmVyCglpdHhuX2ZpZWxkIFR5cGVFbnVtCgoJLy8gY29udHJhY3RzXEFncm9zaG9wLmFsZ28udHM6MTIyCgkvLyB4ZmVyQXNzZXQ6IGFzc2V0CglmcmFtZV9kaWcgLTEgLy8gYXNzZXQ6IEFzc2V0SUQKCWl0eG5fZmllbGQgWGZlckFzc2V0CgoJLy8gY29udHJhY3RzXEFncm9zaG9wLmFsZ28udHM6MTIzCgkvLyBhc3NldFJlY2VpdmVyOiB0aGlzLnR4bi5zZW5kZXIKCXR4biBTZW5kZXIKCWl0eG5fZmllbGQgQXNzZXRSZWNlaXZlcgoKCS8vIGNvbnRyYWN0c1xBZ3Jvc2hvcC5hbGdvLnRzOjEyNAoJLy8gYXNzZXRBbW91bnQ6IGN1cnJlbnREZXBvc2l0ZWQKCWZyYW1lX2RpZyAwIC8vIGN1cnJlbnREZXBvc2l0ZWQ6IHVpbnQ2NAoJaXR4bl9maWVsZCBBc3NldEFtb3VudAoKCS8vIEZlZSBmaWVsZCBub3Qgc2V0LCBkZWZhdWx0aW5nIHRvIDAKCWludGMgMSAvLyAwCglpdHhuX2ZpZWxkIEZlZQoKCS8vIFN1Ym1pdCBpbm5lciB0cmFuc2FjdGlvbgoJaXR4bl9zdWJtaXQKCXJldHN1YgoKKmFiaV9yb3V0ZV9jcmVhdGVBcHBsaWNhdGlvbjoKCWludGMgMCAvLyAxCglyZXR1cm4KCipjcmVhdGVfTm9PcDoKCXB1c2hieXRlcyAweGI4NDQ3YjM2IC8vIG1ldGhvZCAiY3JlYXRlQXBwbGljYXRpb24oKXZvaWQiCgl0eG5hIEFwcGxpY2F0aW9uQXJncyAwCgltYXRjaCAqYWJpX3JvdXRlX2NyZWF0ZUFwcGxpY2F0aW9uCgoJLy8gdGhpcyBjb250cmFjdCBkb2VzIG5vdCBpbXBsZW1lbnQgdGhlIGdpdmVuIEFCSSBtZXRob2QgZm9yIGNyZWF0ZSBOb09wCgllcnIKCipjYWxsX05vT3A6CglwdXNoYnl0ZXMgMHg2YTRlN2ZjYSAvLyBtZXRob2QgImFsbG93QXNzZXQocGF5LHVpbnQ2NCl2b2lkIgoJcHVzaGJ5dGVzIDB4NTM3MmQ4YzIgLy8gbWV0aG9kICJsaXN0aW5nRGVwb3NpdChwYXksYXhmZXIsdWludDY0LHVpbnQ2NCl2b2lkIgoJcHVzaGJ5dGVzIDB4OWI0YjgyMzQgLy8gbWV0aG9kICJkZXBvc2l0KGF4ZmVyLHVpbnQ2NCl2b2lkIgoJcHVzaGJ5dGVzIDB4NGQ4YjIzZDggLy8gbWV0aG9kICJzZXRQcmljZSh1aW50NjQsdWludDY0LHVpbnQ2NCl2b2lkIgoJcHVzaGJ5dGVzIDB4NTJhYzVkZjcgLy8gbWV0aG9kICJidXkoYWRkcmVzcyx1aW50NjQsdWludDY0LHBheSx1aW50NjQpdm9pZCIKCXB1c2hieXRlcyAweGUzYWViMjVjIC8vIG1ldGhvZCAid2l0aGRyYXcodWludDY0LHVpbnQ2NCl2b2lkIgoJdHhuYSBBcHBsaWNhdGlvbkFyZ3MgMAoJbWF0Y2ggKmFiaV9yb3V0ZV9hbGxvd0Fzc2V0ICphYmlfcm91dGVfbGlzdGluZ0RlcG9zaXQgKmFiaV9yb3V0ZV9kZXBvc2l0ICphYmlfcm91dGVfc2V0UHJpY2UgKmFiaV9yb3V0ZV9idXkgKmFiaV9yb3V0ZV93aXRoZHJhdwoKCS8vIHRoaXMgY29udHJhY3QgZG9lcyBub3QgaW1wbGVtZW50IHRoZSBnaXZlbiBBQkkgbWV0aG9kIGZvciBjYWxsIE5vT3AKCWVycg==",
+    "clear": "I3ByYWdtYSB2ZXJzaW9uIDEw"
+  },
+  "byteCode": {
+    "approval": "CiAFAQAIBMTxAiYBADEYFIEGCzEZCI0MAm4AAAAAAAAAAAAAAmAAAAAAAAAAAAAAADYaARcxFiIJSTgQIhJEiAACIkOKAgAyCov+cABMSBREi/84BzIKEkSL/zgIMhASRLElshCL/rIRI7ISMgqyFCOyAbOJNhoCFzYaARcxFiIJSTgQJRJEMRaBAglJOBAiEkSIAAIiQ4oEADEAi/44ERZQi/0WUL1MSBREi/84ADEAEkSL/zgHMgoSRIv/OAghBBJEi/44ADEAEkSL/jgUMgoSRIv+OBIjDUQxAIv+OBEWUIv9FlCL/jgSFov8FlC/iTYaARcxFiIJSTgQJRJEiAACIkOKAgAoSTEAi/84ERZQi/4WUL1MSESL/zgAMQASRIv/OBQyChJEi/84EiMNRCMkMQCL/zgRFlCL/hZQTgK6F4wAJCQxAIv/OBEWUIv+FlBOAroXjAExAIv/OBEWUIv+FlCLAIv/OBIIFosBFlC/iTYaAxc2GgIXNhoBF4gAAiJDigMAKCMkMQCL/xZQi/4WUE4CuheMADEAi/8WUIv+FlCLABaL/RZQv4k2GgQXMRYiCUk4ECISRDYaAxc2GgIXNhoBSRWBIBJEiAACIkOKBQAoRwIjJIv/i/4WUIv9FlBOAroXjAAkJIv/i/4WUIv9FlBOAroXjAGLAYv7C4wCi/w4ADEAEkSL/DgHi/8SRLElshCL/rIRMQCyFIv7shIjsgGzi/+L/hZQi/0WUIsAi/sJFosBFlC/iTYaAhc2GgEXiAACIkOKAgAoIyQxAIv/FlCL/hZQTgK6F4wAMQCL/xZQi/4WULyxIrIQMQCyByEEsggjsgGzsSWyEIv/shExALIUiwCyEiOyAbOJIkOABLhEezY2GgCOAf/xAIAEak5/yoAEU3LYwoAEm0uCNIAETYsj2IAEUqxd94AE466yXDYaAI4G/V79ov4e/p/+2f9oAA==",
+    "clear": "Cg=="
+  },
+  "compilerInfo": {
+    "compiler": "algod",
+    "compilerVersion": {
+      "major": 3,
+      "minor": 26,
+      "patch": 0,
+      "commitHash": "0d10b244"
+    }
+  }
+}
